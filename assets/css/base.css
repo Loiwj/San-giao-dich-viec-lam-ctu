@@ -15,10 +15,10 @@
 
 .my-login-out {
     position: absolute;
-    right:  70px;
+    right: 70px;
     top: 0;
     transform: translateY(50%);
-    
+
 }
 
 .job-search-sec {
@@ -97,7 +97,7 @@
     box-shadow: 0 0 30px #fff;
 }
 
-@media (max-width:768px)  {
+@media (max-width:768px) {
     .job-search-style1 h3 {
         font-size: 20px;
 
@@ -114,7 +114,7 @@
         top: 20%;
         width: 90%;
         transform: translateY(-50%) translateX(-50%);
-        
+
     }
 
     .my-input-search i {
@@ -136,6 +136,7 @@
 
     }
 }
+
 .yellow-cl {
     color: #ffc107;
 }
@@ -145,11 +146,12 @@
 .text-decoration-non a {
     text-decoration: none;
 }
+
 .nav-link.my-cv:hover {
     color: #fff3cd !important;
 }
 
-.logo-footer img{
+.logo-footer img {
     width: 80%;
     margin-top: 20px;
 }
@@ -162,4 +164,119 @@
     cursor: pointer;
     transform: scale(1.2);
     color: #fff;
+}
+
+.my-main {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.my-form {
+    width: 100%;
+    min-height: 100px;
+    padding: 0 24px 32px;
+    text-align: center;
+    background: #fff;
+    border-radius: 2px;
+    margin: 24px;
+    align-self: center;
+    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+}
+
+.my-form .my-heading {
+    font-size: 20px;
+}
+
+.my-form .my-desc {
+    text-align: center;
+    color: #636d77;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 24px;
+    margin-top: 16px;
+    font-weight: 300;
+}
+
+.my-form-group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+}
+
+.my-form-label,
+.my-form-message {
+    text-align: left;
+}
+
+.my-form-label {
+    font-weight: 700;
+    padding-bottom: 6px;
+    line-height: 14px;
+    font-size: 14px;
+}
+
+.my-form-control {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    outline: none;
+    font-size: 14px;
+}
+
+.my-form-checkbox {
+    flex-direction: row;
+}
+
+.my-checkbox-element {
+    margin: 12px 24px 0;
+}
+
+.my-checkbox-name {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #636d77;
+}
+
+.my-form-control:hover {
+    border-color: #1dbfaf;
+}
+
+.my-form-group.my-invalid .my-form-control {
+    border-color: #f33a58;
+}
+
+.my-form-group.my-invalid .my-form-message {
+    color: #f33a58;
+}
+
+.my-form-message {
+    font-size: 12px;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+}
+
+.my-form-submit {
+    outline: none;
+    background-color: #1dbfaf;
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.my-form-submit:hover {
+    background-color: #1ac7b6;
+}
+
+.my-spacer {
+    margin-top: 36px;
 }
