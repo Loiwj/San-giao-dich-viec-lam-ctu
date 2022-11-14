@@ -136,11 +136,17 @@
 
     }
 }
+.yellow-cl {
+    color: #ffc107;
+}
 
 /* End heder */
 /* footer */
 .text-decoration-non a {
     text-decoration: none;
+}
+.nav-link.my-cv:hover {
+    color: #fff3cd !important;
 }
 
 .logo-footer img{
