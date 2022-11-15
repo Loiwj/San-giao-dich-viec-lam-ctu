@@ -31,11 +31,7 @@
     color: #999999;
     border: 2px solid #e8ecec;
     max-width: 720px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    border-radius: 8px;
+ 
   }
   .header-top select {
     margin-right: 20px;
