@@ -117,8 +117,9 @@ a:focus {
   margin-bottom: 20px;
 }
 .header-top select {
-  margin-right: 20px;
-  font-size: 20px;
+  margin-right: 10px;
+      font-size: 16px;
+      padding: 4px 8px;
 }
 .header-title {
   margin-top: 25px;
@@ -284,13 +285,14 @@ ul li {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  font-size: 14px;
 }
 .job-style-bx > i {
   position: absolute;
   right: 16px;
   bottom: 0;
   font-style: normal;
-  font-size: 18px;
+  font-size: 14px;
   color: #888888;
  
 }
