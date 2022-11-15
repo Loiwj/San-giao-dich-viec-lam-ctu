@@ -48,13 +48,13 @@
             </nav>
             <div id="carouselExampleInterval wow" class=" slide my-mt-img" data-bs-ride="carousel">
                 <div class="carousel-inner carousel-img-custom">
-                    <div class="carousel-item active" data-bs-interval="2000">
+                    <div class="carousel-item active" data-bs-interval="5000">
                         <img src="./assets/images/home1.jpg" class="d-block w-100" alt="vieclam">
                     </div>
-                    <div class="carousel-item carousel-img-custom" data-bs-interval="2000">
+                    <div class="carousel-item carousel-img-custom" data-bs-interval="5000">
                         <img src="./assets/images/home2.jpg" class="d-block w-100" alt="Ngay-hoi-vl">
                     </div>
-                    <div class="carousel-item carousel-img-custom" data-bs-interval="2000">
+                    <div class="carousel-item carousel-img-custom" data-bs-interval="5000">
                         <img src="./assets/images/home3.jpg" class="d-block w-100" alt="nha-dieu-hanh">
                     </div>
                 </div>
@@ -486,43 +486,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script src="./assets/js/base.js"></script>
     <script src="./assets/js/trangchu.js"></script>
     <script>
-        Validator({
-            form: '#my-form-1',//todo Lấy ra id của form
-            formGroupSelector: '.my-form-group',
-            errorSelector: '.my-form-message',
-            rules: [
-                Validator.isRequired('#my-fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
-                Validator.isRequired('#my-email', 'Không được bỏ trống Email'),
-                Validator.isEmail('#my-email'),
-                Validator.minLength('#my-password', 6),
-                Validator.isRequired('#my-password_confirmation', 'Vui lòng nhập lại mật khẩu'),
-                Validator.isConfirmed('#my-password_confirmation', () => {
-                    return document.querySelector('#my-form-1 #my-password').value
-                }, 'Mật khẩu nhập lại không chính xác')
-
-            ],
-            onSubmit: function (data) {
-                console.log(data);
-            }
-
-        });
-        Validator({
-            form: '#my-form-2',//todo Lấy ra id của form
-            formGroupSelector: '.my-form-group',
-            errorSelector: '.my-form-message',
-            rules: [
-                Validator.isRequired('#my-email-2', 'Không được bỏ trống Email'),
-                Validator.isEmail('#my-email-2'),
-                Validator.minLength('#my-password-2', 6),
-
-            ],
-            onSubmit: function (data) {
-                console.log(data);
-            }
-
-        });
+        
 
 
     </script>
