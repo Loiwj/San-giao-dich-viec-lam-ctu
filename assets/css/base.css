@@ -138,7 +138,7 @@
 }
 
 .yellow-cl {
-    color: #ffc107;
+    color: #ffc107 !important;
 }
 
 /* End heder */
