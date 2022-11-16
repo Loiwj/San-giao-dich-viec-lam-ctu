@@ -149,7 +149,7 @@ ul {
 }
 
 .col-left h3 {
-    min-width: 75%;
+    min-width: 78%;
     font-size: 24px;
     color: #fff;
 }
@@ -161,6 +161,7 @@ ul {
 }
 
 .body-icon {
+    margin-right: -12px;
     margin-top: 10px;
     font-size: 24px;
     color: var(--primary-color-);

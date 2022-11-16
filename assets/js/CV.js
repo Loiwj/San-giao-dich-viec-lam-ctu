@@ -14,7 +14,7 @@ imgInp.onchange = evt => {
 btn.addEventListener("click", handleDetail);
 function handleDetail() {
     render();
-    alert("Dữ liệu đã được gửi! Bạn có thể xem ở phần Review!")
+    alert("Dữ liệu đã được gửi! Bạn có thể xem ở phần Xem lại!")
 }
 
 function render() {
