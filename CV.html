@@ -51,11 +51,11 @@
             <div class="header">
                 <div class="header-profile mt24 mt_rps_12">
                     <div>
-                        <img class="avatar" src="./assets/images/download.png" alt="ảnh hồ sơ của bạn">
+                        <img class="avatar" src="./assets/images/download.png" id="result" alt="ảnh hồ sơ của bạn">
                     </div>
-                    <input class="input-avatar input_handle" type="file">
-                    <h5><input class="header-input-name input_handle" type="text" placeholder="Enter full name"></h5>
-                    <h8><input class="header-input-position input_handle" type="text" placeholder="Recruitment position"></h8>
+                    <input class="input-avatar input_handle" id="imgInp" type="file">
+                    <h5><input class="header-input-name input_handle" type="text" placeholder="Nhập họ tên"></h5>
+                    <h8><input class="header-input-position input_handle" type="text" placeholder="Vị trí việc làm"></h8>
                 </div>
 
                 <div class="header-profile-info mt24 mt_rps_12">
@@ -68,22 +68,22 @@
 
                     <div class="header-list-info profile-date text_9px">
                         <i class="header-icon fa-solid fa-calendar-days"></i>
-                        <input class="input_handle" type="date" name="date">
+                        <input class="input_handle" type="text" name="date" placeholder="Nhập ngày sinh">
                     </div>
 
                     <div class="header-list-info profile-phone-number text_9px">
                         <i class="header-icon fa-solid fa-phone"></i>
-                        <input class="input_handle" type="tel" name="phone">
+                        <input class="input_handle" type="tel" name="phone" placeholder="Nhập số điện thoại">
                     </div>
 
                     <div class="header-list-info profile-email text_9px">
                         <i class="header-icon fa-solid fa-envelope"></i>
-                        <input class="input_handle" type="email" placeholder="Enter your Email">
+                        <input class="input_handle" type="email" placeholder="Nhập Email của bạn">
                     </div>
 
                     <div class="header-list-info profile-address text_9px">
                         <i class="header-icon fa-solid fa-location-dot"></i>
-                        <input class="input_handle" type="text" placeholder="Enter your address">
+                        <input class="input_handle" type="text" placeholder="Nhập địa chỉ của bạn">
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
 
                     <div class="body__job-goals">
                         <i class="fa-solid fa-check"></i>
-                        <input class="input_handle" type="text">
+                        <input class="input_handle" type="text" placeholder="VD: lương cao">
                     </div>
                 </div>
 
@@ -113,7 +113,7 @@
                     <div class="body__skills">
                         <ul class="skills_list">
                             <li>
-                                - <input class="input_handle" type="text">
+                                - <input class="input_handle" type="text" placeholder="VD: Làm việc nhóm">
                             </li>
                         </ul>
                     </div>
@@ -166,7 +166,7 @@
 
                     <div class="body__level">
                         <p class="place__univerity">
-                            Tốt nghiệp trường: <input class="input_handle" type="text" placeholder="(VD: Tiểu học)">
+                            Tốt nghiệp trường: <input class="input_handle" type="text" placeholder="VD: Tiểu học">
                         </p>
                         <p class="place__university">
                             Trường/ nơi đào tạo: <input class="input_handle" type="text">
@@ -196,9 +196,9 @@
 
                     <div class="body__projects">
                         <p>
-                            - <input class="input_handle" type="text" placeholder="Name Projects">
+                            - <input class="input_handle" type="text" placeholder="Tên dự án">
                         </p>
-                        <input class="input_handle" type="text" placeholder="Description Projects">
+                        <input class="input_handle" type="text" placeholder="Mô tả dự án">
                     </div>
                 </div>
             </div>
@@ -211,9 +211,9 @@
     </div>
 
     <div class="my-btn">
-        <button class="btn-submit" type="submit"> Submit</button>
-        <button type="button" class="btn-reload "> Edit</button>
-        <button class="btn-submit show-review" type="submit"> Review</button>
+        <button class="btn-submit" type="submit"> Gửi</button>
+        <button type="button" class="btn-reload "> Chỉnh sửa</button>
+        <button class="btn-submit show-review" type="submit"> Xem lại</button>
     </div>
 
 
