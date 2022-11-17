@@ -4,6 +4,7 @@ const btn_reLoad = document.querySelector(".btn-reload");
 setTimeout(function () {
     alert("Bạn nên điền file ảnh vào trước, nếu không sẽ dễ lỗi lưu dữ liệu!!!");
 }, 0)
+
 imgInp.onchange = evt => {
     const [file] = imgInp.files
     if (file) {
@@ -31,7 +32,11 @@ function render() {
             break;
         }
     }
-    console.log(arrays);
+    
+
+    for(let i = 0; i< inputs.length; i++) {
+        inputs[i].value = '';
+    }
 
     const htmls = `
     <div class="main">
