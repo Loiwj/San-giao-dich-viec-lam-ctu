@@ -149,7 +149,7 @@ ul {
 }
 
 .col-left h3 {
-    min-width: 75%;
+    min-width: 78%;
     font-size: 24px;
     color: #fff;
 }
@@ -161,6 +161,7 @@ ul {
 }
 
 .body-icon {
+    margin-right: -12px;
     margin-top: 10px;
     font-size: 24px;
     color: var(--primary-color-);
@@ -189,7 +190,7 @@ ul {
 .header-js {
     display: flex;
     justify-content: space-between;
-    margin: 0px 5% 0 12%;
+    margin: 0px 5% 0 8%;
     height: 308px;
 }
 

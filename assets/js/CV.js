@@ -1,16 +1,25 @@
 
 const btn = document.querySelector(".btn-submit");
 const btn_reLoad = document.querySelector(".btn-reload");
+setTimeout(function () {
+    alert("Bạn nên điền file ảnh vào trước, nếu không sẽ dễ lỗi lưu dữ liệu!!!");
+}, 0)
 
-
+imgInp.onchange = evt => {
+    const [file] = imgInp.files
+    if (file) {
+        result.src = URL.createObjectURL(file)
+    }
+}
 
 btn.addEventListener("click", handleDetail);
 function handleDetail() {
     render();
-    alert("Dữ liệu đã được gửi!")
+    alert("Dữ liệu đã được gửi! Bạn có thể xem ở phần Xem lại!")
 }
 
 function render() {
+
     let inputs = document.querySelectorAll(".input_handle");
     let arrays = [];
 
@@ -23,7 +32,11 @@ function render() {
             break;
         }
     }
-    console.log(inputs);
+    
+
+    for(let i = 0; i< inputs.length; i++) {
+        inputs[i].value = '';
+    }
 
     const htmls = `
     <div class="main">
@@ -31,7 +44,7 @@ function render() {
             <div class="header-js header-mobile-js">
                 <div class="header-profile mt24 mt_rps_12">
                     <div class = "avatar-js">
-                        <img class="avatar " src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt="ảnh hồ sơ của bạn">
+                        <img class="avatar " src="${result.src}" alt="ảnh hồ sơ của bạn">
                     </div>
                     <h2 class = "header_name-js header_name-tablet-js header_name-mobile-js">${arrays[1]}</h2>
                     <h4 class = "header_position-tablet-js header_position-mobile-js">${arrays[2]}</h4>
@@ -186,11 +199,13 @@ function render() {
             </div>
         </div>
     </div>`
-
-    localStorage.setItem('data', htmls);
-    document.querySelector(".my-modal-body").innerHTML = localStorage.getItem('data');
+    sessionStorage.setItem('data_arrays', arrays);
+    sessionStorage.setItem('data', htmls);
+    document.querySelector(".my-modal-body").innerHTML = sessionStorage.getItem('data');
 }
-document.querySelector(".my-modal-body").innerHTML = localStorage.getItem('data');
+
+document.querySelector(".my-modal-body").innerHTML = sessionStorage.getItem('data');
+
 
 
 // Show Result 
@@ -214,38 +229,41 @@ modalClose.addEventListener('click', hideReviews);
 btn_reLoad.addEventListener("click", editReLoad);
 
 function editReLoad() {
-    let text = "Edit sẽ điền lại tất cả! Bạn chắc chứ ?";
-    if (confirm(text) === true) {
-        location.reload();
-        localStorage.clear();
-    }
-}
-document.onkeydown = function (e) {
-    switch (e.which) {
-        case 116: {
-            e.preventDefault();
-            let text = "F5 sẽ điền lại tất cả! Bạn chắc chứ ?";
-            if (confirm(text) === true) {
-                location.reload();
-            }
-            break;
+    let inputs = document.querySelectorAll(".input_handle");
+    let text = "Bạn đang yêu cầu chỉnh lại nội dung, bạn chắc chứ ?";
+    let text2 = "Avatar của bạn sẽ phải tự nhập lại, bạn đồng ý chứ ?"
+    if (confirm(text) === true && confirm(text2) === true) {
+        for (let i = 1; i < inputs.length; i++) {
+            inputs[i].value = sessionStorage.getItem('data_arrays').split(/,/)[i];
         }
     }
 }
+// document.onkeydown = function (e) {
+//     switch (e.which) {
+//         case 116: {
+//             e.preventDefault();
+//             let text = "F5 sẽ điền lại tất cả! Bạn chắc chứ ?";
+//             if (confirm(text) === true) {
+//                 location.reload();
+//             }
+//             break;
+//         }
+//     }
+// }
 
-let keysPressed = {};
-document.addEventListener('keydown', (event) => {
-    keysPressed[event.key] = true;
+// let keysPressed = {};
+// document.addEventListener('keydown', (event) => {
+//     keysPressed[event.key] = true;
 
-    if (keysPressed['Control'] && event.key == 'r') {
-        event.preventDefault();
-        let text = "Crt + R sẽ điền lại tất cả! Bạn chắc chứ ?";
-        if (confirm(text) === true) {
-            location.reload();
-        }
-    }
-});
+//     if (keysPressed['Control'] && event.key == 'r') {
+//         event.preventDefault();
+//         let text = "Crt + R sẽ điền lại tất cả! Bạn chắc chứ ?";
+//         if (confirm(text) === true) {
+//             location.reload();
+//         }
+//     }
+// });
 
-document.addEventListener('keyup', (event) => {
-    delete keysPressed[event.key];
-});
+// document.addEventListener('keyup', (event) => {
+//     delete keysPressed[event.key];
+// });
