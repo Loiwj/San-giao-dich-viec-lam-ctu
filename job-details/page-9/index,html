@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng Thông Tin Việc Làm</title>
+   <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/css-for-job.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+
+</head>
+<body>
+
+
+    <div class="app">
+        <header class="header wow">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-nav">
+                <a class="navbar-brand  logo-ctu " href="/">
+                    <img src="./assets/images/logo-ctu-svg.svg" alt="">
+                </a>
+                <div class="my-login-out">
+                    <button data-toggle="modal" data-target="#loginModal" type="button"
+                        class="btn btn-outline-light me-2">Đăng Ký</button>
+                    <button data-toggle="modal" data-target="#logoutModal" type="button" class="btn btn-warning">Đăng
+                        Nhập</button>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Công việc</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hội chợ việc làm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled my-cv" href="#">Tài Khoản</a>
+                        </li>
+                    </ul>
+            </nav>
+        </header>
+
+    </div>
+           
+        <main>
+
+             <div id='my-job-viewport'> <!-- Bắt đầu khung chính --> 
+
+            <div class='my-job-branding-scroll'>
+
+
+    
+                                                
+        
+        <div id='my-job-description'> <!-- Bắt đầu đặc tả công việc -->
+            
+                <div id='major-description'> <!-- Bắt đầu phần mô tả chính -->
+
+                <div class="job-title2">
+                                <h3 id="job_title_detail" class="">Thực tập sinh Thẩm định giá</h3>
+                                <span class="job-is tp">Thực tập</span>
+                                <span class="detail-article-total-view"><i class="fa fa-eye my-icon-padding"></i>70000 lượt xem</span>
+                            </div>
+
+                    <p class='my-text-size'><ul class="tags-jobs">
+                                <li style="float: none;margin-bottom: 15px;line-height: 20px;"><i class="fa fa-map-marker my-icon-padding"></i>TP. Hồ Chí Minh</li>
+                                <li style="float:none;margin-bottom: 15px;line-height: 20px; display:table;width:100%;">
+                                            <div style="float:left;margin-right:30px;"><i class="fa fa-sack-dollar my-icon-padding"></i>Mức lương: <span>Lương thực tập</span></div>
+                                            <div><i class="fa fa-user-plus my-icon-padding"></i>Số lượng cần tuyển: <span>3</span></div>
+                                </li>
+                                <li><i class="fa fa-calendar my-icon-padding"></i> Ngày đăng: 08/11/2022</li>
+                                <li style="margin-bottom:15px;"><i class="fa fa-calendar my-icon-padding"></i>Ngày hết hạn: 03/12/2022</li>
+                                <li style="margin-bottom:15px;"><i class="fa fa-school my-icon-padding"></i>Kinh nghiệm: <span>Sinh viên</span></li>
+                                
+                                <li style="margin-bottom:15px;"><i class="fa fa-users my-icon-padding"></i>Cấp bậc: <span>Thử việc</span></li>
+                                <li style="margin-bottom:15px;"><i class="fa fa-language my-icon-padding"></i>Ngôn ngữ trình bày hồ sơ: <span>Tiếng Việt</span></li>
+                                <li style="line-height: 20px;"><i class="fa fa-flag my-icon-padding"></i>Tags: <span>Thực tập, Thẩm định giá, Tài chính</span>
+                            </li></ul></p>
+
+                    </div> <!-- Kết thúc phần mô tả chính -->
+
+
+
+        
+        <div id='my-detailed-description'> <!-- Bắt đầu phần mô tả chi tiết -->
+
+                    
+
+                     <div class="job-details">
+                            <h3 style="font-weight:bold">Mô tả công việc</h3>
+                            <div class="detail-editor"><ul><li>Khảo sát, tìm kiếm và thu thập thông tin tài sản.</li><li>Công việc hành chính văn phòng theo yêu cầu của người quản lý trực tiếp.</li><li>Công việc liên quan đến thẩm định giá.</li></ul><p><strong>Quyền lợi:</strong></p><ul><li>Được đào tạo về kiến thức Thẩm định giá, được đào tạo các kỹ năng làm việc và tiếp xúc công việc thực tế.</li><li>Được giữ lại sau khi tốt nghiệp nếu đảm bảo yêu cầu công việc.</li><li>Được hỗ trợ lương theo giờ.</li><li>Được ưu tiên sắp xếp giờ thực tập phù hợp lịch học.</li></ul></div>
+                            <h3 style="font-weight:bold">Yêu cầu công việc</h3>
+                            <div class="detail-editor"><ul><li>Đang học năm 2 hoặc năm 3 các trường kinh tế/tài chính/ngân hàng</li><li>Có tinh thần học hỏi, nhanh nhẹn trong công việc</li></ul></div>
+                                    <h3 style="font-weight:bold">Thông tin liên hệ</h3>
+                                    <div class="detail-editor"><p>Ms. Nhung</p><ul><li>Tel : 0938193010</li><li>Email:&nbsp;<a href="mailto:nhungnth@cvic.com.vn">nhungnth@cvic.com.vn</a></li></ul></div>
+                        </div>
+                     
+
+                    </div> <!-- Kết thúc phần mô tả chi tiết -->
+                    
+                        
+            </div>  <!-- Kết thúc đặc tả công việc -->
+
+            <div id='my-job-branding'> <!-- Bắt đầu thương hiệu -->
+            
+            <div id='my-logo-branding'> <!-- Bắt đầu logo thương hiệu -->
+                
+                <img id='my-logo-image' src='/logo/logo-9.jpg' width='124px' height='124px' alt='Logo công ty ở đây'></img>
+
+                <br><br>
+
+                <p class='my-hover-transition my-title-size'>Công ty Cổ phần Thẩm Định – Giám Định Cửu Long (CVIC)</p>
+
+                <div id='branding-details'>
+
+                <div id='location' class='my-hover-transition branding-info'>
+                <i class="fa fa-location-arrow my-icon-padding"></i><span>TP. Hồ Chí Minh</span>
+                </div>
+
+                <br>
+                
+                <div id='link' class='my-hover-transition branding-info'>
+                        <i class="fa fa-link my-icon-padding"></i><span>http://cvic.com.vn/</span>
+                    </div>
+
+                <br>
+                
+                <div id='phone-number' class='my-hover-transition branding-info'>
+                        <i class='fa fa-phone my-icon-padding'></i><span>02839485839</span>
+                    </div>
+
+                <br>
+                    
+                    <div id='email' class='my-hover-transition branding-info'>
+                            <i class='fa fa-envelope my-icon-padding'></i><span> nhungnth@cvic.com.vn</span>
+                        </div>
+
+                        </div>
+                    
+                </div> <!-- Kết thúc logo thương hiệu -->
+                    
+                        <div id='my-detailed-branding'> <!-- Bắt đầu thông tin chi tiết thương hiệu -->
+                            </div> <!-- Kết thúc thông tin chi tiết thương hiệu -->
+                                
+                                <br>
+                                
+                                <div id='button-holder'>
+                                
+                                <div id='my-apply-job' class='my-hover-transition'> <!-- Bắt đầu nút nộp đơn -->
+                                    <i class='fa fa-location-arrow my-icon-padding'></i><span>Nộp đơn</span>
+                                    </div> <!-- Kết thúc nút nộp đơn -->
+                                        
+                                        </div>
+                                        
+                                        <br>
+                                        
+                                        <div id='my-other-job' class='my-hover-transition'> <!-- Bắt đầu nút tìm việc khác -->
+                                            
+                                            <i class='fa fa-briefcase my-icon-padding'></i><span>Tìm việc khác</span>
+                                                
+                                            </div> <!-- Kết thúc nút tìm việc khác -->
+                                                
+                                                   </div> <!-- Kết thúc thương hiệu -->
+
+                        
+                        
+    </div> <!-- Kết thúc khung chính -->
+        </main>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-muted wow">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Sàn việc làm sinh viên Đại Học Cần Thơ</span>
+            </div>
+            <!-- Left -->
+            <!-- Right -->
+            <div class="text-decoration-non">
+                <a href="#" class="wow me-4 text-reset ">
+                    <i class="fab fa-facebook-f footer-item"></i>
+                </a>
+                <a href="#" class="wow me-4 text-reset">
+                    <i class="fab fa-twitter footer-item"></i>
+                </a>
+                <a href="#" class="wow me-4 text-reset">
+                    <i class="fab fa-google footer-item"></i>
+                </a>
+                <a href="#" class="wow me-4 text-reset">
+                    <i class="fab fa-instagram footer-item"></i>
+                </a>
+                <a href="#" class="wow me-4 text-reset">
+                    <i class="fab fa-linkedin footer-item"></i>
+                </a>
+                <a href="#" class="wow me-4 text-reset">
+                    <i class="fab fa-github footer-item"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+        <!-- Section: Links  -->
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <H3>ĐẠI HỌC CẦN THƠ</H3>
+                        <h4>Can Tho University</h4>
+                        <a href="/" class=" d-flex  mb-2 mb-lg-0 text-white text-decoration-none logo-footer">
+                            
+                        </a>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-decoration-non">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Việc làm theo ngành
+                        </h6>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Kế toán</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Ngân hàng</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">IT - Phần mền</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Xây dựng</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Bán hàng</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Y tế/ Sức khoẻ</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Quảng cáo/ Khuyến mãi</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Giáo dục/ Đào Tạo</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-decoration-non">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Địa Điểm
+                        </h6>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Cần Thơ</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Tp. Hồ Chí Minh</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Hà Nội</a>
+                        </p>
+                        <p class="footer-item">
+                            <a href="#!" class="text-reset">Đà Nẵng</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p class="footer-item"><i class="fas fa-home me-3"></i> Khu 2,Đ. 3/2, P.Xuân Khánh, Q.Ninh
+                            Kiều,TP. Cần Thơ</p>
+                        <p class="footer-item">
+                            <i class="fas fa-envelope me-3"></i>
+                            dhct@ctu.edu.vn
+                        </p class="footer-item">
+                        <p class="footer-item"><i class="fas fa-phone me-3"></i>ĐT: +84292 3832 663</p>
+
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center footer-item p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold " href="#">Group1.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="my-main">
+                        <h3 class="my-heading">Cổng việc làm CTU</h3>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="my-main">
+                        <form action="" method="POST" class="my-form" id="my-form-1">
+                            <h4 class="my-heading">Đăng Ký Thành Viên</h4>
+                            <div class="my-spacer"></div>
+                            <div class="my-form-group">
+                                <label for="fullname" class="my-form-label">Tên đầy đủ</label>
+                                <input id="my-fullname" name="fullname" type="text" placeholder="VD: Dương Quốc Lợi"
+                                    class="my-form-control" required>
+                                <span class="my-form-message"></span>
+                            </div>
+                            <div class="my-form-group">
+                                <label for="email" class="my-form-label">Email</label>
+                                <input id="my-email" name="email" type="text" placeholder="VD: email@domain.com"
+                                    class="my-form-control" required>
+                                <span class="my-form-message"></span>
+                            </div>
+                            <div class="my-form-group">
+                                <label for="password" class="my-form-label">Mật khẩu</label>
+                                <input id="my-password" name="password" type="password" placeholder="Nhập mật khẩu"
+                                    class="my-form-control" required>
+                                <span class="my-form-message"></span>
+                            </div>
+                            <div class="my-form-group">
+                                <label for="password_confirmation" class="my-form-label">Nhập lại mật khẩu</label>
+                                <input id="my-password_confirmation" name="password_confirmation"
+                                    placeholder="Nhập lại mật khẩu" type="password" class="my-form-control" required>
+                                <span class="my-form-message"></span>
+                            </div>
+                            <button data-dismiss="modal" aria-label="Close" data-toggle="modal"
+                                data-target="#logoutModal" type="button" class="btn btn-warning close"
+                                style="float: left;">Đăng
+                                Nhập</button>
+                            <button class="btn btn-primary" type="submit" style="float: right;">Đăng Ký</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="my-main">
+                        <h3 class="my-heading">Cổng việc làm CTU</h3>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="my-main">
+                        <form action="" method="POST" class="my-form" id="my-form-2">
+                            <h4 class="my-heading">Đăng Nhập Thành Viên</h4>
+                            <div class="my-spacer"></div>
+
+                            <div class="my-form-group">
+                                <label for="email" class="my-form-label">Email</label>
+                                <input id="my-email-2" name="email" type="text" placeholder="VD: email@domain.com"
+                                    class="my-form-control" required>
+                                <span class="my-form-message"></span>
+                            </div>
+                            <div class="my-form-group">
+                                <label for="password" class="my-form-label">Mật khẩu</label>
+                                <input id="my-password-2" name="password" type="password" placeholder="Nhập mật khẩu"
+                                    class="my-form-control" required>
+                                <span class="my-form-message"></span>
+                            </div>
+
+                            <button data-dismiss="modal" aria-label="Close" data-toggle="modal"
+                                data-target="#loginModal" type="button" class="btn btn-warning close"
+                                style="float: left;">Đăng
+                                Nhập</button>
+                            <button class="btn btn-primary" type="submit" style="float: right;">Đăng Nhập</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+
+</body>
+
+</html>
