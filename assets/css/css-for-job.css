@@ -16,7 +16,7 @@
     background-color: white;
     color: black;
     font-family: 'Open Sans';
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .branding-info {
@@ -28,6 +28,7 @@
 /* begin icon section */
 
 .fa {
+    font-family: font-awesome;
     color: #8D83EE;
 }
 
@@ -118,14 +119,12 @@ ul {
 }
 
 
-
-
 @media only screen and (max-width: 768px) {
     
     /* For mobile */
 
 #my-job-viewport {
-  padding-top: 15%;
+  padding-top: 5%;
 
 }
 
