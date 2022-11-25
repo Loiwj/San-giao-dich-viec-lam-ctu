@@ -7,7 +7,7 @@
 .hide {
   display: none;
 }
-.block{
+.block {
   display: block;
 }
 .my-3 {
@@ -17,31 +17,37 @@
 
 /* Start main */
 /* aside left */
-.slidebar{
+.slidebar {
   border: 2px solid #e6e7ef;
   border-radius: 8px;
   margin-top: 20px;
   float: left;
   width: 100%;
 }
-.slidebar:hover{
+.slidebar:hover {
   box-shadow: 0 0 30px #ccc;
-
 }
-.slidebar button{
+.slidebar button {
   width: 100%;
 }
-.slidebar .collapse{
+.slidebar .collapse {
   padding: 18px 20px;
 }
+
 /* End aside left */
 
 /* start Aside right */
-.mtb{
+li .mtb {
+  transition: transform 0.2s;
+}
+li .mtb:hover {
+  transform: scaleY(1.5);
+}
+.mtb {
   margin: 10px 0;
   cursor: pointer;
 }
-.mtb label{
+.mtb label {
   padding-left: 10px;
   cursor: pointer;
 }
@@ -99,9 +105,9 @@ a:focus {
 }
 .col1 {
   margin-top: 10px;
-  transition:all ease-in-out 2s;
+  transition: all ease-in-out 2s;
 }
-.sortby-sec{
+.sortby-sec {
   margin: 30px 0;
   float: flex;
 }
@@ -118,8 +124,8 @@ a:focus {
 }
 .header-top select {
   margin-right: 10px;
-      font-size: 16px;
-      padding: 4px 8px;
+  font-size: 16px;
+  padding: 4px 8px;
 }
 .header-title {
   margin-top: 25px;
@@ -132,7 +138,7 @@ ul {
   margin: 0 0 30px;
   padding: 0;
 }
-  
+
 .job-listing:hover {
   border-left-color: #8b91dd;
   box-shadow: 0px 0px 30px rgb(0 0 0 / 10%);
@@ -250,7 +256,7 @@ ul li {
   width: 130px;
   text-align: center;
 }
-.job-is.tp{
+.job-is.tp {
   color: #26ae61;
   border-color: #26ae61;
 }
@@ -294,7 +300,6 @@ ul li {
   font-style: normal;
   font-size: 14px;
   color: #888888;
- 
 }
 .job-listing.wtabs .job-style-bx {
   padding-bottom: 31px;
@@ -343,12 +348,12 @@ ul li {
 /* end aside right */
 /* End main */
 
-@keyframes all{
-  from{
+@keyframes all {
+  from {
     opacity: 0;
     transform: translateY(-140px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
   }
