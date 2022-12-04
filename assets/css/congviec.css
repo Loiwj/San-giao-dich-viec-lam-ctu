@@ -41,7 +41,7 @@ li .mtb {
   transition: transform 0.2s;
 }
 li .mtb:hover {
-  transform: scaleY(1.5);
+  transform: scale(1.05);
 }
 .mtb {
   margin: 10px 0;
@@ -138,19 +138,33 @@ ul {
   margin: 0 0 30px;
   padding: 0;
 }
-
-.job-listing:hover {
-  border-left-color: #8b91dd;
-  box-shadow: 0px 0px 30px rgb(0 0 0 / 10%);
-  z-index: 1;
-  position: relative;
-}
 h3 > a {
   font-size: 17px;
 }
 .job-listtings-sec {
   float: left;
   width: 100%;
+}
+.job-listing {
+  transition: transform 0.2s;
+  float: left;
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid #e8ecec;
+  padding: 20px 0;
+  background: #ffffff;
+  border-left: 2px solid #ffffff;
+  padding-right: 30px;
+}
+.job-listing:hover {
+  border-left-color: #8b91dd;
+  /* box-shadow: 0px 0px 30px rgb(0 0 0 / 10%); */
+  z-index: 1;
+  box-shadow: 0 0.5em 0.5em -0.4em #e5ff60;
+  background-color: rgba(0,0,0,0.1);
+  transform: translateY(-0.25em);
+  position: relative;
+  transform: s
 }
 .job-listing.wtabs {
   border: 3px solid #ebefef;
@@ -163,17 +177,6 @@ h3 > a {
   display: inherit;
   text-align: left;
   position: relative;
-}
-
-.job-listing {
-  float: left;
-  width: 100%;
-  display: table;
-  border-bottom: 1px solid #e8ecec;
-  padding: 20px 0;
-  background: #ffffff;
-  border-left: 2px solid #ffffff;
-  padding-right: 30px;
 }
 .job-listing.wtabs .job-title-sec {
   float: left;
