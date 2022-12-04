@@ -3,7 +3,7 @@ var LoadPostDateSort = {
   total: 6,
   lstPostTime: [
     {
-      ngaydangId: 1,
+      ngaydangId: 1, 
       tenngaydang: "Mới nhất",
       sogio: 1,
     },
@@ -189,6 +189,7 @@ var LoadJobExperienceSort = {
     },
   ],
 };
+// Tìm phần tử cha của Element
 function getParent(element, selector) {
   if (element.matches(".mtb")) {
     return element;
@@ -203,6 +204,7 @@ function getParent(element, selector) {
     element = element.parentElement;
   }
 }
+// Xử lí sự kiện khi click vào thẻ input thêm checked
 function handlecheck(parentElement, target) {
   var inputElement = parentElement.querySelector("input");
 
@@ -212,19 +214,34 @@ function handlecheck(parentElement, target) {
     inputElement.checked = true;
   }
 }
+// Hàm jquery xủ7 lí sự kiện click trực tiếp vào thẻ input radio
+// bật tắt checked radio
+$(document).on("click", "input[name='postdate']", function () {
+  thisRadio = $(this);
+  if (thisRadio.hasClass("imChecked")) {
+    thisRadio.removeClass("imChecked");
+    thisRadio.prop("checked", false);
+  } else {
+    thisRadio.prop("checked", true);
+    thisRadio.addClass("imChecked");
+  }
+});
+// lắng nghe sự kiện click
 document.addEventListener("click", function (e) {
   var parentInput = getParent(e.target, ".mtb");
   if (parentInput) {
-      handlecheck(parentInput);
+    handlecheck(parentInput);
   }
 });
-$(document).on("click", "input[name='postdate']", function(){
-    thisRadio = $(this);
-    if (thisRadio.hasClass("imChecked")) {
-        thisRadio.removeClass("imChecked");
-        thisRadio.prop('checked', false);
-    } else { 
-        thisRadio.prop('checked', true);
-        thisRadio.addClass("imChecked");
-    };
+var buttonJob = document.getElementById("btn_filter_job");
+buttonJob.addEventListener('click',function(){
+  let inputNodelist = document.querySelectorAll("input");
+  let inputChecked = Array.from(inputNodelist).filter(function(input){
+    if(input.checked==true){
+      return input;
+    }
+  })
+  for(let i=0;i<inputChecked.length;i++){
+    console.log((inputChecked[i]).value);
+  }
 })
