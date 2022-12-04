@@ -8,7 +8,7 @@ $(".form-search").submit(function (e) {
     console.log(searchValue);
     switch (searchValue.province) {
         case "Tất cả":
-            window.location = "./congviec.html"
+            
             break;
 
         default:

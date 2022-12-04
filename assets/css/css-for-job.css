@@ -182,21 +182,94 @@ ul {
     
 }
 
- .job-title2{float:left;width:100%;}
- .job-title2 > h3{font-size:20px;font-weight:bold;margin:0;margin-right:20px;margin-bottom: 20px;}
- .job-title2 span.job-is{float:left;margin:0;}
- .job-title2 > i{float:left;font-size:26px;color:#B8B8B8;margin:1px 0;margin-left:18px;}
+ .job-title2 {
+  float:left;
+  width:100%;
+}
+
+ .job-title2 > h3{
+  font-size:20px;
+  font-weight:bold;
+  margin:0;margin-right:
+  20px;margin-bottom: 20px;
+}
+
+ 
+ .job-title2 > i{
+  float:left;
+  font-size:26px;
+  color:#B8B8B8;
+  margin:1px 0;
+  margin-left:18px;
+}
 
 
- .tags-jobs{float:left;width:100%;margin:0;margin-top:0px;margin-top:20px;}
- .tags-jobs > li{float:left;margin:0;margin-right:0px;font-family:Open Sans;margin-right:30px;}
- .tags-jobs > li i{float:left;float:left;line-height:15px;margin-right:8px;}
- .tags-jobs > li span{color: #8D83EE;}
+ .tags-jobs{
+  float:left;
+  width:100%;
+  margin:0;
+  margin-top:0px;
+  margin-top:20px;
+}
 
- .job-details{float:left;width:100%;padding-top:20px;}
- .job-details h3{float:left;width:100%;font-family:Open Sans;font-size:16px;color:#202020;margin-bottom:15px;margin-top:10px;}
- .job-details p, .job-details li{float:left;width:100%;font-size:14px;color:#888888;line-height:24px;margin:0;margin-bottom:19px;}
- .job-details > ul{float:left;width:100%;margin-bottom:20px;}
- .job-details > ul li{float:left;width:100%;margin:0;margin-bottom:0px;position:relative;padding-left:23px;line-height:21px;margin-bottom:10px;font-size:14px;color:#888888;}
- .job-details > ul li::before{position:absolute;left:0;top:13px;width:10px;height:1px;background:#888888;content:"";}
+ .tags-jobs > li{
+  float:left;
+  margin:0;
+  margin-right:0px;
+  font-family:Open Sans;
+  margin-right:30px;
+}
 
+ .tags-jobs > li i{
+  float:left;
+  line-height:15px;
+  margin-right:8px;
+}
+
+ .tags-jobs > li span{
+  color: #8D83EE;
+}
+
+ .job-details {
+  float:left;
+  width:100%;
+  padding-top:20px;
+
+}
+
+ .job-details h3{
+  font-family:Open Sans;
+  font-size:16px;
+  color:#202020;
+  margin-bottom:15px;
+  margin-top:10px;
+}
+
+ .job-details p, .job-details li{
+  
+  width:100%;
+  font-size:14px;
+  color:#888888;
+  line-height:24px;
+  margin:0;
+  margin-bottom:19px;
+}
+
+ .job-details > ul{
+  float:left;
+  width:100%;
+  margin-bottom:20px;
+}
+
+ .job-details > ul li{
+  float:left;
+  width:100%;
+  margin:0;
+  margin-bottom:0px;
+  position:relative;
+  padding-left:23px;
+  line-height:21px;
+  margin-bottom:10px;
+  font-size:14px;
+  color:#888888;
+}
