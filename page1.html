@@ -36,20 +36,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item ">
-                        <a class="nav-link disabled" href="./index.html">Trang chủ </a>
+                        <a class="nav-link " href="./index.html">Trang chủ </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./congviec_page1.html">Công việc</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hội chợ việc làm</a>
+                        <a class="nav-link" href="./hoichovieclam.html">Hội chợ việc làm</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled my-cv" href="./thongbao.html">Tài khoản</a>
                     </li>
                 </ul>
         </nav>
-    
+
     </header>
 
 
@@ -93,10 +93,12 @@
                             <li style="margin-bottom:15px;"><i class="fa fa-calendar my-icon-padding"></i>Ngày hết hạn:
                                 03/12/2022</li>
                             <li style="margin-bottom:15px;"><i class="fa fa-school my-icon-padding"></i>Kinh nghiệm:
-                                <span>Thử việc</span></li>
+                                <span>Thử việc</span>
+                            </li>
 
                             <li style="margin-bottom:15px;"><i class="fa fa-users my-icon-padding"></i>Cấp bậc:
-                                <span>Thử việc</span></li>
+                                <span>Thử việc</span>
+                            </li>
                             <li style="margin-bottom:15px;"><i class="fa fa-language my-icon-padding"></i>Ngôn ngữ trình
                                 bày hồ sơ: <span>Tiếng Việt</span></li>
                             <li style="line-height: 20px;"><i class="fa fa-flag my-icon-padding"></i>Tags: <span>IT -
@@ -223,22 +225,24 @@
                     <br>
 
                     <div id='button-holder'>
+                        <button type="button"
+                            id="my-apply-job"><i class='fa fa-location-arrow my-icon-padding'></i><span>Nộp đơn</span>
+                            Đăng Ký</button>
 
-                        <div id='my-apply-job'>
-                            <!-- Bắt đầu nút nộp đơn -->
-                            <i class='fa fa-location-arrow my-icon-padding'></i><span>Nộp đơn</span>
-                        </div> <!-- Kết thúc nút nộp đơn -->
+                        <!-- Bắt đầu nút nộp đơn -->
+
+                        </button> <!-- Kết thúc nút nộp đơn -->
 
                     </div>
 
                     <br>
 
-                    <div id='my-other-job'>
+                    <a id='my-other-job' href="./congviec_page1.html">
                         <!-- Bắt đầu nút tìm việc khác -->
 
                         <i class='fa fa-briefcase my-icon-padding'></i><span>Tìm việc khác</span>
 
-                    </div> <!-- Kết thúc nút tìm việc khác -->
+                    </a> <!-- Kết thúc nút tìm việc khác -->
 
                 </div> <!-- Kết thúc thương hiệu -->
 
@@ -485,18 +489,40 @@
 
     <script src="./assets/js/jquery-3.6.1.min.js"></script>
     <script src="./assets/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
-        <script src="./assets/js/wow.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-            <script src="./assets/js/base.js"></script>
-        <script src="./assets/js/trangchu.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/base.js"></script>
+    <script src="./assets/js/trangchu.js"></script>
+    <script>
+        var nopdon = document.querySelector("#my-apply-job")
+        nopdon.addEventListener("click", function (e) {
+            if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
+                let dataToggle = document.createAttribute('data-toggle');
+                dataToggle.value = "modal"
+                let dataTarget = document.createAttribute("data-target")
+                dataTarget.value = "#loginModal"
+                let dataClass = document.createAttribute("class")
+                dataClass.value = "btn"
+               this.setAttributeNode(dataToggle)
+               this.setAttributeNode(dataTarget)
+               this.setAttributeNode(dataClass)
+               
+            }
+            else{
+                window.location = "./CV.html"
+            }
+        })
+        
+        // data-toggle="modal" data-target="#loginModal" type="button" class="btn"
+    </script>
 </body>
 
 </html>

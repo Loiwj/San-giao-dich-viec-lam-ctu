@@ -4,7 +4,6 @@
     margin-left: 30px;
     font-size: 16px;
     position: relative;
-    top: ;
     color: #8b91dd;
 }
 
@@ -20,7 +19,7 @@
 }
 
 .branding-info {
-  color: #8D83EE;
+  color: #8540f5;
   font-size: 15px;
 }
 
@@ -28,11 +27,11 @@
 /* begin icon section */
 
 .fa {
-    color: #8D83EE;
+    color: #8540f5;
 }
 
 .my-icon-padding {
-    padding-right: 5px;
+    padding-right: 10px;
     padding-top: 3px;
 }
 
@@ -86,15 +85,17 @@ ul {
 }
 
 #my-apply-job {
-    margin: auto;
+  margin: auto;
+  border: none;
     color: white;
     padding-top: 5px;
-    padding-bottom: 5px;
-    width: 150px;
-    height: 40px;
+    /* padding-bottom: 5px; */
+    width: 220px;
+    height: 50px;
     background-color: #fb236a;
     border-radius: 50px;
     transition: 0.3s;
+
 }
 
 #my-apply-job:hover {
@@ -102,12 +103,14 @@ ul {
 }
 
 #my-other-job {
+  display: block;
+  text-decoration: none;
     margin: auto;
     color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 150px;
-    height: 40px;
+    padding-top: 13px;
+    /* padding-bottom: 5px; */
+    width: 220px;
+    height: 50px;
     background-color: #BDB6FF;
     border-radius: 50px;
     transition: 0.4s;
@@ -249,7 +252,7 @@ ul {
   
   width:100%;
   font-size:14px;
-  color:#888888;
+  /* color:#888888; */
   line-height:24px;
   margin:0;
   margin-bottom:19px;
