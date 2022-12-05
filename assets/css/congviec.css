@@ -38,10 +38,11 @@
 
 /* start Aside right */
 li .mtb {
-  transition: transform 0.2s;
+  transition: all 1s liner;
 }
 li .mtb:hover {
-  transform: scale(1.05);
+  box-shadow: 0 0.5em 0.5em -0.4em #e5ff60;
+  transform: translateY(-0.25em);
 }
 .mtb {
   margin: 10px 0;
@@ -160,11 +161,10 @@ h3 > a {
   border-left-color: #8b91dd;
   /* box-shadow: 0px 0px 30px rgb(0 0 0 / 10%); */
   z-index: 1;
-  box-shadow: 0 0.5em 0.5em -0.4em #e5ff60;
   background-color: rgba(0,0,0,0.1);
+  box-shadow: 0 0.5em 0.5em -0.4em #e5ff60;
   transform: translateY(-0.25em);
   position: relative;
-  transform: s
 }
 .job-listing.wtabs {
   border: 3px solid #ebefef;

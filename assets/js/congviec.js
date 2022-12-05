@@ -3,7 +3,7 @@ var LoadPostDateSort = {
   total: 6,
   lstPostTime: [
     {
-      ngaydangId: 1, 
+      ngaydangId: 1,
       tenngaydang: "Mới nhất",
       sogio: 1,
     },
@@ -189,6 +189,14 @@ var LoadJobExperienceSort = {
     },
   ],
 };
+var List = [
+  {
+    id:1,
+    img: "",
+    company:"",
+
+  }
+]
 // Tìm phần tử cha của Element
 function getParent(element, selector) {
   if (element.matches(".mtb")) {
@@ -205,7 +213,7 @@ function getParent(element, selector) {
   }
 }
 // Xử lí sự kiện khi click vào thẻ input thêm checked
-function handlecheck(parentElement, target) {
+function handlecheck(parentElement) {
   var inputElement = parentElement.querySelector("input");
 
   if (inputElement.checked == true) {
@@ -214,9 +222,20 @@ function handlecheck(parentElement, target) {
     inputElement.checked = true;
   }
 }
+function handleInput (ele){
+  if(ele.classList.contains('imChecked')){
+    ele.classList.remove('imChecked');
+    ele.setAttribute('checked',false);
+  }
+  else{
+    ele.setAttribute('checked',true);
+    ele.classList.add('imChecked');
+  }
+}
 // Hàm jquery xủ7 lí sự kiện click trực tiếp vào thẻ input radio
 // bật tắt checked radio
-$(document).on("click", "input[name='postdate']", function () {
+function handleInput (value){
+$(document).on("click", value, function () {
   thisRadio = $(this);
   if (thisRadio.hasClass("imChecked")) {
     thisRadio.removeClass("imChecked");
@@ -226,22 +245,34 @@ $(document).on("click", "input[name='postdate']", function () {
     thisRadio.addClass("imChecked");
   }
 });
+}
+handleInput("input[name='typejob']");
+handleInput("input[name='postdate']");
+handleInput("input[name='groupjob']");
+handleInput("input[name='exp']");
+
+
 // lắng nghe sự kiện click
 document.addEventListener("click", function (e) {
-  var parentInput = getParent(e.target, ".mtb");
-  if (parentInput) {
+  if(e.target.tagName.toLowerCase() === 'input')
+{
+}
+  else{
+    let parentInput = getParent(e.target, ".mtb");
+   if(parentInput ) {
     handlecheck(parentInput);
   }
+}
 });
 var buttonJob = document.getElementById("btn_filter_job");
-buttonJob.addEventListener('click',function(){
+buttonJob.addEventListener("click", function () {
   let inputNodelist = document.querySelectorAll("input");
-  let inputChecked = Array.from(inputNodelist).filter(function(input){
-    if(input.checked==true){
+  let inputChecked = Array.from(inputNodelist).filter(function (input) {
+    if (input.checked == true) {
       return input;
     }
-  })
-  for(let i=0;i<inputChecked.length;i++){
-    console.log((inputChecked[i]).value);
+  });
+  for (let i = 0; i < inputChecked.length; i++) {
+    console.log(inputChecked[i].value);
   }
-})
+});
