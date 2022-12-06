@@ -276,7 +276,5 @@ buttonJob.addEventListener("click", function () {
       return input;
     }
   });
-  for (let i = 0; i < inputChecked.length; i++) {
-    
-  }
 });
+
