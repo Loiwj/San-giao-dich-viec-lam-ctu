@@ -200,6 +200,7 @@ var List = [
     tagname :"IT - Phần mềm, Công nghệ thông tin, Marketing"
   }
 ]
+//
 // Tìm phần tử cha của Element
 function getParent(element, selector) {
   if (element.matches(".mtb")) {
