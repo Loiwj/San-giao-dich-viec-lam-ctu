@@ -192,9 +192,12 @@ var LoadJobExperienceSort = {
 var List = [
   {
     id:1,
-    img: "",
-    company:"",
-
+    img: "./assets/images/Gobrangding.jpg",
+    company:"Công ty cổ phần Global Online Brading",
+    adress: "TP. Hồ Chí Minh",
+    posttime:"3 ngày trước",
+    jobtype:"Thực tập",
+    tagname :"IT - Phần mềm, Công nghệ thông tin, Marketing"
   }
 ]
 // Tìm phần tử cha của Element
@@ -266,6 +269,7 @@ document.addEventListener("click", function (e) {
 });
 var buttonJob = document.getElementById("btn_filter_job");
 buttonJob.addEventListener("click", function () {
+  var Html = "";
   let inputNodelist = document.querySelectorAll("input");
   let inputChecked = Array.from(inputNodelist).filter(function (input) {
     if (input.checked == true) {
@@ -273,6 +277,6 @@ buttonJob.addEventListener("click", function () {
     }
   });
   for (let i = 0; i < inputChecked.length; i++) {
-    console.log(inputChecked[i].value);
+    
   }
 });
