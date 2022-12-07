@@ -1,4 +1,3 @@
-
 new WOW().init();
 $(".my-form").submit(function (e) {
     e.preventDefault()
@@ -7,10 +6,9 @@ $(".my-form").submit(function (e) {
 
 });
 
-if (sessionStorage.getItem("isDisable") == 'true') {
+if (sessionStorage.getItem("isDisable") == "true") {
     $(".my-cv").removeClass("disabled ").addClass("yellow-cl");
     $(".my-login-out").addClass("display-none ");
-
 } else {
     $(".my-cv").addClass("disabled ").removeClass("yellow-cl");
     $(".my-login-out").removeClass("display-none ");
@@ -18,113 +16,130 @@ if (sessionStorage.getItem("isDisable") == 'true') {
 
 //* Đối tượng Validator
 function Validator(options) {
-
-    var selectorRules = {}
+    var selectorRules = {};
     //*Hàm thực hiện validate
     function validate(inputElement, rule) {
-        var errorElement = inputElement.closest(options.formGroupSelector).querySelector(options.errorSelector);
-        var errorMessage
+        var errorElement = inputElement
+            .closest(options.formGroupSelector)
+            .querySelector(options.errorSelector);
+        var errorMessage;
         //todo lấy qua các rule của selector
-        var rules = selectorRules[rule.selector]
+        var rules = selectorRules[rule.selector];
         //todo Lập qua từng rule & kiểm tra
         for (let i = 0; i < rules.length; ++i) {
             switch (inputElement.type) {
-                case 'checkbox':
-                case 'radio':
-                    errorMessage = rules[i](formElements.querySelector(rule.selector + ':checked'))
+                case "checkbox":
+                case "radio":
+                    errorMessage = rules[i](
+                        formElements.querySelector(rule.selector + ":checked")
+                    );
                     break;
                 default:
-                    errorMessage = rules[i](inputElement.value)//* input người dùng nhập vào
+                    errorMessage = rules[i](inputElement.value); //* input người dùng nhập vào
             }
             if (errorMessage) {
-                break
+                break;
             }
         }
         if (errorMessage) {
-            errorElement.innerText = errorMessage
-            inputElement.closest(options.formGroupSelector).classList.add('my-invalid')
+            errorElement.innerText = errorMessage;
+            inputElement
+                .closest(options.formGroupSelector)
+                .classList.add("my-invalid");
+        } else {
+            errorElement.innerText = "";
+            inputElement
+                .closest(options.formGroupSelector)
+                .classList.remove("my-invalid");
         }
-        else {
-            errorElement.innerText = '';
-            inputElement.closest(options.formGroupSelector).classList.remove('my-invalid')
-        }
-        return !errorMessage //todo Ép kiểu sang bolen
+        return !errorMessage; //todo Ép kiểu sang bolen
     }
     var formElements = document.querySelector(options.form);
     if (formElements) {
         //todo Khi submit form
         formElements.onsubmit = function (e) {
-            e.preventDefault()
-            var isFormValid = true
+            e.preventDefault();
+            var isFormValid = true;
             //todo Lập qua từng rule và validate
             options.rules.forEach((rule) => {
-                var inputElement = formElements.querySelector(rule.selector)
-                var isValid = validate(inputElement, rule)
+                var inputElement = formElements.querySelector(rule.selector);
+                var isValid = validate(inputElement, rule);
                 if (!isValid) {
-                    isFormValid = false
+                    isFormValid = false;
                 }
-            })
+            });
             //todo Nếu không có lỗi
             if (isFormValid) {
                 //todo Trường hợp submit với javascript
-                if (typeof options.onSubmit === 'function') {
-                    var EnableInputs = formElements.querySelectorAll('[name]:not([disable])')
+                if (typeof options.onSubmit === "function") {
+                    var EnableInputs = formElements.querySelectorAll(
+                        "[name]:not([disable])"
+                    );
                     //todo Array.form(EnableInputs) chuyển từ node list sang array
-                    var formValue = Array.from(EnableInputs).reduce(function (values, input) {
+                    var formValue = Array.from(EnableInputs).reduce(function (
+                        values,
+                        input
+                    ) {
                         switch (input.type) {
-                            case 'checked':
-                            case 'radio':
+                            case "checked":
+                            case "radio":
                                 if (input.checked) {
-                                    values[input.name] = input.value
+                                    values[input.name] = input.value;
                                 }
 
                                 break;
-                            case 'checkbox':
-                                if (!input.matches(':checked')) {
-                                    values[input.name] = ''
-                                    return values
-                                };
-                                if (!Array.isArray(values[input.name])) {
-                                    values[input.name] = []
+                            case "checkbox":
+                                if (!input.matches(":checked")) {
+                                    values[input.name] = "";
+                                    return values;
                                 }
-                                values[input.name].push(input.value)
+                                if (!Array.isArray(values[input.name])) {
+                                    values[input.name] = [];
+                                }
+                                values[input.name].push(input.value);
                                 break;
-                            case 'file':
-                                values[input.name] = input.files
+                            case "file":
+                                values[input.name] = input.files;
                                 break;
                             default:
-                                values[input.name] = input.value
+                                values[input.name] = input.value;
                         }
-                        return values
-                    }, {})
-                    options.onSubmit(formValue)
-                } else {//todo Trường hợp submit với hành vi mặc định
-                    formElements.submit()
+                        return values;
+                    },
+                        {});
+                    options.onSubmit(formValue);
+                } else {
+                    //todo Trường hợp submit với hành vi mặc định
+                    formElements.submit();
                 }
             }
-        }
+        };
         //todo Lập qua sự kiện và xử lý ( Lắng nghe sự kiện blur, input,...)
         options.rules.forEach((rule) => {
             //? Khắc phục tình trạng ghi đè
             if (Array.isArray(selectorRules[rule.selector])) {
-                selectorRules[rule.selector].push(rule.test)//todo nếu như nó đã là mảng rồi thì push thêm phần tử nửa
+                selectorRules[rule.selector].push(rule.test); //todo nếu như nó đã là mảng rồi thì push thêm phần tử nửa
             } else {
-                selectorRules[rule.selector] = [rule.test]//*todo Lưu lại các rules cho mỗi ô input dưới dạng mảng
+                selectorRules[rule.selector] = [rule.test]; //*todo Lưu lại các rules cho mỗi ô input dưới dạng mảng
             }
-            var inputElements = formElements.querySelectorAll(rule.selector)
+            var inputElements = formElements.querySelectorAll(rule.selector);
             Array.from(inputElements).forEach(function (inputElement) {
                 //todo Xử lí trường hợp blur khỏi input
                 inputElement.onblur = function () {
-                    validate(inputElement, rule)
-                }
+                    validate(inputElement, rule);
+                };
                 //todo Xử lí trường người dùng nhập vào input
                 inputElement.oninput = function () {
-                    var errorElement = inputElement.closest(options.formGroupSelector).querySelector(options.errorSelector);
-                    errorElement.innerText = '';
-                    inputElement.closest(options.formGroupSelector).classList.remove('my-invalid')
-                }
-            })
-        })
+                    var errorElement = inputElement
+                        .closest(options.formGroupSelector)
+                        .querySelector(options.errorSelector);
+                    errorElement.innerText = "";
+                    inputElement
+                        .closest(options.formGroupSelector)
+                        .classList.remove("my-invalid");
+                };
+            });
+        });
     }
 }
 
@@ -136,84 +151,103 @@ Validator.isRequired = function (selector, message) {
     return {
         selector: selector,
         test: function (value) {
-            return value ? undefined : message || "Vui lòng nhập lại trường này"
+            return value ? undefined : message || "Vui lòng nhập lại trường này";
             //todo trim() dùng để loại bỏ dấu cách 2 đầu của chuỗi, nếu toàn đấu cách thì xoá hết
-        }
-    }
-}
+        },
+    };
+};
 Validator.isEmail = function (selector, message) {
     return {
         selector: selector,
         test: function (value) {
-            var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-            return regex.test(value) ? undefined : message || 'Trường này phải là email'
-        }
-    }
-}
+            var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return regex.test(value)
+                ? undefined
+                : message || "Trường này phải là email";
+        },
+    };
+};
 Validator.minLength = function (selector, min, message) {
     return {
         selector: selector,
         test: function (value) {
-
-            return value.length >= min ? undefined : message || `Vui lòng nhập tối thiểu ${min} kí tự`
-        }
-    }
-}
+            return value.length >= min
+                ? undefined
+                : message || `Vui lòng nhập tối thiểu ${min} kí tự`;
+        },
+    };
+};
 Validator.isConfirmed = function (selector, getConfirmValue, message) {
     return {
         selector: selector,
         test: function (value) {
-            return value === getConfirmValue() ? undefined : message || 'Giá trị nhập lại không chính xác'
-        }
-    }
-}
-
-
+            return value === getConfirmValue()
+                ? undefined
+                : message || "Giá trị nhập lại không chính xác";
+        },
+    };
+};
 
 Validator({
-    form: '#my-form-1',//todo Lấy ra id của form
-    formGroupSelector: '.my-form-group',
-    errorSelector: '.my-form-message',
+    form: "#my-form-1", //todo Lấy ra id của form
+    formGroupSelector: ".my-form-group",
+    errorSelector: ".my-form-message",
     rules: [
-        Validator.isRequired('#my-fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
-        Validator.isRequired('#my-email', 'Không được bỏ trống Email'),
-        Validator.isEmail('#my-email'),
-        Validator.minLength('#my-password', 6),
-        Validator.isRequired('#my-password_confirmation', 'Vui lòng nhập lại mật khẩu'),
-        Validator.isConfirmed('#my-password_confirmation', () => {
-            return document.querySelector('#my-form-1 #my-password').value
-        }, 'Mật khẩu nhập lại không chính xác')
-
+        Validator.isRequired("#my-fullname", "Vui lòng nhập tên đầy đủ của bạn"),
+        Validator.isRequired("#my-email", "Không được bỏ trống Email"),
+        Validator.isEmail("#my-email"),
+        Validator.minLength("#my-password", 6),
+        Validator.isRequired(
+            "#my-password_confirmation",
+            "Vui lòng nhập lại mật khẩu"
+        ),
+        Validator.isConfirmed(
+            "#my-password_confirmation",
+            () => {
+                return document.querySelector("#my-form-1 #my-password").value;
+            },
+            "Mật khẩu nhập lại không chính xác"
+        ),
     ],
     onSubmit: function (data) {
-        sessionStorage.setItem("dangky", JSON.stringify(data))
-        location.reload()
-
-    }
-
+        sessionStorage.setItem("dangky", JSON.stringify(data));
+        location.reload();
+    },
 });
 Validator({
-    form: '#my-form-2',//todo Lấy ra id của form
-    formGroupSelector: '.my-form-group',
-    errorSelector: '.my-form-message',
+    form: "#my-form-2", //todo Lấy ra id của form
+    formGroupSelector: ".my-form-group",
+    errorSelector: ".my-form-message",
     rules: [
-        Validator.isRequired('#my-email-2', 'Không được bỏ trống Email'),
-        Validator.isEmail('#my-email-2'),
-        Validator.minLength('#my-password-2', 6),
-
+        Validator.isRequired("#my-email-2", "Không được bỏ trống Email"),
+        Validator.isEmail("#my-email-2"),
+        Validator.minLength("#my-password-2", 6),
     ],
+    onSubmit: function (data) {
+        var dangky = JSON.parse(sessionStorage.getItem("dangky"));
+        if (dangky.email === data.email && dangky.password === data.password) {
+            location.reload();
+            alert("Đăng Nhập Thành Công");
+        } else {
+            alert("Email Hoặc Mật Khẩu Không Chính Xác");
+        }
+    },
     onSubmit: function (data) {
         var dangky = JSON.parse(sessionStorage.getItem("dangky"))
         if (dangky.email === data.email && dangky.password === data.password) {
             location.reload()
             alert("Đăng Nhập Thành Công")
-
+    
         } else {
             alert("Email Hoặc Mật Khẩu Không Chính Xác")
         }
-
+    
     }
+    
 });
+
+    
+
 
 $(".form-search").submit(function (e) {
     e.preventDefault();
@@ -221,7 +255,7 @@ $(".form-search").submit(function (e) {
         province: $(".province").val(),
         job: $(".job").val()
     }
- 
+
     if (!searchValue.province.includes('Tất cả') && !searchValue.province.includes("TP. Hồ Chí Minh")) {
         window.location = "../../kythuat_congnghe.html"
     } else {
@@ -304,3 +338,7 @@ $(".form-search").submit(function (e) {
         }
     }
 });
+var loading = document.querySelector(".loading");
+setTimeout(function () {
+    loading.classList.remove("loading");
+}, 2000);

@@ -32,6 +32,8 @@ ul {
 }
 
 .main {
+    padding: 8px 6px;
+    background-color: #f0f0f0;
     max-width: 1024px;
     margin: 10% auto 5%;
 }
@@ -74,6 +76,7 @@ ul {
 }
 
 .main__body-description {
+    max-height: 680px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: "l l l l r r r r r r r .";
     display: grid;
@@ -91,7 +94,7 @@ ul {
     display: block;
     position: absolute;
     border-left: 3px solid var(--primary-color-);
-    height: calc(100% + 20px);
+    height: 100%;
     top: 0;
     left: 36%;
 }
