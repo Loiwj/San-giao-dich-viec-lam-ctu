@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div class="loading">Loading&#8230;</div>
     <div class="app">
         <header class="header wow">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-nav">
@@ -38,7 +39,7 @@
                             <a class="nav-link" href="index.html">Trang chủ </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="./congviec_page1.html">Công việc</a>
+                            <a class="nav-link disabled" href="">Công việc</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./hoichovieclam.html">Hội chợ việc làm</a>
@@ -183,134 +184,140 @@
                                             <button class="btn btn-toggle align-items-center rounded "
                                                 data-bs-toggle="collapse" data-bs-target="#orders-collapse"
                                                 aria-expanded="true">
-                                                Nhóm nghành
+                                                Lọc CV THEO NGHÀNH NGHỀ
                                             </button>
                                             <div class="collapse show" id="orders-collapse">
                                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="" > <label
-                                                                for="type_job" class="label-checkbox">Dịch vụ Tài
-                                                                chính</label>
+                                                    <div id="v_cv_with_job">
+                                                        <p id="v_cv_heading">LỌC CV THEO NGÀNH NGHỀ</p>
+                                                        <div class="form_fillter">
+                                                            <form id="v_cv_search" action="">
+                                                                <input type="text" id="v_cv_search_input"
+                                                                    autocomplete="Off"
+                                                                    placeholder="Tìm kiếm theo ngành nghề">
+                                                                <button id="v_cv_search_btn"><img
+                                                                        src="https://vieclam123.vn/images/v_cv_search.svg"
+                                                                        alt="Search"></button>
+                                                            </form>
+                                                            <hr id="v_cv_search_hr">
+                                                            <div id="v_cv_profession">
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec/"
+                                                                    class="v_cv_link">Tất Cả Các Ngành Nghề </a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-cho-sinh-vien-moi-ra-truong/"
+                                                                    class="v_cv_link">Sinh viên mới ra trường - Chưa tốt
+                                                                    nghiệp</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-ke-toan/"
+                                                                    class="v_cv_link">Kế Toán</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-it-cong-nghe-thong-tin/"
+                                                                    class="v_cv_link">IT - Công Nghệ Thông Tin</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-xay-dung/"
+                                                                    class="v_cv_link">Xây dựng</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-nhan-vien-kinh-doanh/"
+                                                                    class="v_cv_link">Kinh doanh</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-marketing/"
+                                                                    class="v_cv_link">Marketing</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-part-time/"
+                                                                    class="v_cv_link">Part time - Làm thêm - Bán Thời
+                                                                    Gian</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nhan-vien-ban-hang/"
+                                                                    class="v_cv_link">Bán hàng</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-ngan-hang/"
+                                                                    class="v_cv_link">Ngân hàng - Tài chính</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-developers/"
+                                                                    class="v_cv_link">Developers</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-y-te-duoc/"
+                                                                    class="v_cv_link">Y tế - Dược</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-thiet-ke-do-hoa/"
+                                                                    class="v_cv_link">Thiết kế đồ họa - Mỹ thuật</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-hanh-chinh-nhan-su/"
+                                                                    class="v_cv_link">Hành chính nhân sự</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-kien-truc-su/"
+                                                                    class="v_cv_link">Kiến trúc nội thất</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-tro-giang-tieng-anh/"
+                                                                    class="v_cv_link">Trợ Giảng Tiếng Anh</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-le-tan/"
+                                                                    class="v_cv_link">Lễ Tân</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-giao-vien/"
+                                                                    class="v_cv_link">Giáo Viên</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-lai-xe/"
+                                                                    class="v_cv_link">Vận tải - Lái xe</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-ky-su-co-khi/"
+                                                                    class="v_cv_link">Kỹ sư Cơ khí</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-ky-su-dien-dien-tu/"
+                                                                    class="v_cv_link">Điện - điện tử</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-cham-soc-khach-hang/"
+                                                                    class="v_cv_link">Chăm sóc khách hàng</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nha-hang-khach-san/"
+                                                                    class="v_cv_link">Nhà hàng - Khách sạn</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-xuat-nhap-khau/"
+                                                                    class="v_cv_link">Xuất nhập khẩu</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-hanh-chinh-van-phong/"
+                                                                    class="v_cv_link">Hành chính văn phòng</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-quan-ly/"
+                                                                    class="v_cv_link">Quản lý - Điều hành</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-ky-thuat/"
+                                                                    class="v_cv_link">Kỹ Thuật</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-luat/"
+                                                                    class="v_cv_link">Luật - Pháp lý</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-phuc-vu/"
+                                                                    class="v_cv_link">Phục Vụ</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-telesales/"
+                                                                    class="v_cv_link">Telesales</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-nganh-logistics/"
+                                                                    class="v_cv_link">Logistics</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-dau-bep-phu-bep/"
+                                                                    class="v_cv_link">Đầu bếp - Phụ bếp</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-tro-ly-giam-doc/"
+                                                                    class="v_cv_link">Thư ký - trợ lý</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-cong-nghe-thuc-pham/"
+                                                                    class="v_cv_link">Công nghệ thực phẩm</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-du-lich/"
+                                                                    class="v_cv_link">Du lịch</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-quan-ly-san-xuat/"
+                                                                    class="v_cv_link">Vận hành - Quản lý sản xuất</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-thu-ngan/"
+                                                                    class="v_cv_link">Thu Ngân</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-thiet-ke-thoi-trang/"
+                                                                    class="v_cv_link">Thiết kế thời trang</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bien-phien-dich/"
+                                                                    class="v_cv_link">Biên phiên dịch</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-quan-tri-kinh-doanh/"
+                                                                    class="v_cv_link">Quản trị kinh doanh</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bat-dong-san/"
+                                                                    class="v_cv_link">Bất động sản</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-to-chuc-su-kien/"
+                                                                    class="v_cv_link">Tổ Chức Sự Kiện</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-copywriter/"
+                                                                    class="v_cv_link">Copywriter</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-nhan-vien-tu-van/"
+                                                                    class="v_cv_link">Tư vấn viên</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-trai-nganh/"
+                                                                    class="v_cv_link">Trái Ngành</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-seo-website/"
+                                                                    class="v_cv_link">SEO Website</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-spa/"
+                                                                    class="v_cv_link">Làm đẹp - Spa</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bao-hiem/"
+                                                                    class="v_cv_link">Bảo Hiểm</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-nganh-dien-tu-vien-thong/"
+                                                                    class="v_cv_link">Điện tử viễn thông</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-thu-y/"
+                                                                    class="v_cv_link">Chăn nuôi thú y</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-truyen-thong/"
+                                                                    class="v_cv_link">Truyền Thông</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bao-ve/"
+                                                                    class="v_cv_link">Bảo Vệ</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-may/"
+                                                                    class="v_cv_link">Dệt May - Da Giày</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bao-tri/"
+                                                                    class="v_cv_link">Bảo Trì</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-nhan-vien-thong-ke/"
+                                                                    class="v_cv_link">Thống Kê</a>
+                                                                <a href="https://vieclam123.vn/mau-cv-nganh-nghe-khac/"
+                                                                    class="v_cv_link">Ngành nghề khác</a>
+                                                            </div>
                                                         </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="" >
-                                                            <label for="type_job" class="label-checkbox">Truyền
-                                                                thông</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="" checked>
-                                                            <label for="type_job" class="label-checkbox">Hàng tiêu
-                                                                dùng
-                                                                & bán lẻ</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Khách sạn &
-                                                                du
-                                                                lịch</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Kỹ thuật -
-                                                                công
-                                                                nghệ</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Xây
-                                                                dựng</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Vận
-                                                                tải</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Dịch
-                                                                vụ</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Giao dịch
-                                                                khách
-                                                                hàng</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Bộ phận hỗ
-                                                                trợ</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Kỹ
-                                                                thuật</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Y
-                                                                tế</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Sản
-                                                                xuất</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Hỗ trợ sản
-                                                                xuất</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Nhân
-                                                                sự</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Kinh
-                                                                doanh</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="mtb">
-                                                            <input type="radio" name="postdate" value="">
-                                                            <label for="type_job" class="label-checkbox">Phiên
-                                                                dịch</label>
-                                                        </div>
-                                                    </li>
-                                                    
+                                                    </div>
                                                 </ul>
                                             </div>
                                         </li>
@@ -336,63 +343,7 @@
                                 </div>
                             </div>
                             <div class="column col-lg-9">
-                                <div class="sortby-sec">
-                                    <div class="header-top">
-                                        <span>Sắp xếp</span>
-                                        <select name="" id="" data-placeholder="Ngày đăng mới nhất">
-                                            <option value="0" selected="selected">Ngày đăng mới nhất</option>
-                                            <option value="1">Ngày đăng cũ nhất</option>
-                                        </select>
-                                        <select name="" id="" data-placeholder="20 công việc/trang">
-                                            <option value="0" selected="selected">20 công việc/trang</option>
-                                            <option value="1">50 công việc/trang</option>
-                                            <option value="1">100 công việc/trang</option>
-                                            <option value="1">150 công việc/trang</option>
-                                        </select>
-                                    </div>
-                                    <h5 class="header-title">Có Sẵn 1 công việc</h5>
-                                </div>
-                                <div class="border-top my-3"></div>
-                                <div class="content-right">
-                                    <ul class="job-listtings-sec">
-                                        <li class="job-listing wtabs wow animated" style="visibility: visible;">
-                                            <div class="job-title-sec">
-                                                <a href="#" class="job-listing-img c-logo">
-                                                    <img src="./assets/images/Qualiserv.png" alt=""></a>
-                                                <h3>
-                                                    <a class="color-a" href="#">
-                                                        Nhân viên kinh doanh/Sales Admin/Trợ lý kinh ...</a>
-                                                </h3>
-                                                <span>Công ty TNHH Qualiserv Việt Nam</span>
-                                                <div class="job-lctn">
-                                                    <i class="fa-solid fa-location-dot"></i>
-                                                    TP. Hồ Chí Minh
-                                                </div>
-                                            </div>
 
-                                            <div class="job-style-bx">
-                                                <a href="#"><span class="job-is tp">Toàn thời gian</span></a>
-                                                <span class=""><i class=""></i></span>
-                                                <i>17 ngày trước</i>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="footer-right">
-                                    <ul class="list-page">
-
-                                        <li class="active">
-                                            <span>1</span>
-                                        </li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li>
-                                            <a href="#" rel="prev">
-                                                <i class="fa-solid fa-angle-right"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
 
                         </div>
