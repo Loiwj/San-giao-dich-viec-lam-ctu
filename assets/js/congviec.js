@@ -66,6 +66,7 @@ document.addEventListener("click", function (e) {
 }
 });
 var buttonJob = document.getElementById("btn_filter_job");
+// xử lí khi click vào nút lọc
 buttonJob.addEventListener("click", function () {
   let inputNodelist = document.querySelectorAll("input");
   let inputChecked = Array.from(inputNodelist).filter(function (input) {
@@ -73,7 +74,7 @@ buttonJob.addEventListener("click", function () {
       return input;
     }
   });
-  if(inputChecked){
+  if(inputChecked.length!==0){
   switch(Number(inputChecked[0].value)){
     case 0:{
       window.location.href = "./congviec_page1.html"
@@ -151,7 +152,55 @@ buttonJob.addEventListener("click", function () {
   }
 }
 else{
-  window.location.href = "./congviec_page1.html"
+  window.location.reload()
 }
 });
 
+// xử lí khi click vào bỏ lọc 
+var btn_unfilter_job = document.getElementById('btn_unfilter_job');
+btn_unfilter_job.addEventListener('click',function(){
+  let inputNodelist = document.querySelectorAll("input");
+  let inputChecked = Array.from(inputNodelist).filter(function (input) {
+    if (input.checked == true) {
+      return input;
+    }
+  });
+  if(inputChecked.length!==0){
+    inputChecked[0].checked= false;
+  }
+  window.location.reload();
+})
+// xử lí khi click vào select sort_day
+var sort_day = document.getElementById('sort_day')
+var loading_cv = document.getElementById('loading_cv');
+sort_day.addEventListener('change',function(){
+  var html ;
+  if(sort_day.value === "1"){
+    html =  `
+    <option value="1">Ngày đăng cũ nhất</option>
+    <option value="0">Ngày đăng mới nhất</option>
+   `
+      loading_cv.classList.add('loading');
+      setTimeout(function(){
+        loading_cv.classList.remove('loading');
+      },2000)
+      sort_day.innerHTML = html;
+  }
+  else{
+    html =  `
+    <option value="0">Ngày đăng mới nhất</option>
+    <option value="1">Ngày đăng cũ nhất</option>
+   `
+   loading_cv.classList.add('loading');
+   setTimeout(function(){
+     loading_cv.classList.remove('loading');
+   },2000)
+   sort_day.innerHTML = html;
+  }
+})
+
+//Xử lí khi click vào select sort_value
+var sort_value = document.getElementById('sort_value');
+sort_value.addEventListener('change',function(){
+
+})

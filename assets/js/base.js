@@ -333,8 +333,6 @@ $(".form-search").submit(function (e) {
                 window.location.href = "../../phiendich.html"
                 break;
             }
-
-
         }
     }
 });
