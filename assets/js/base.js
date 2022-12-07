@@ -213,3 +213,9 @@ Validator({
         }
 
     }});
+
+
+var loading = document.querySelector('.loading');
+setTimeout(function(){
+  loading.classList.remove('loading');
+},2000)
