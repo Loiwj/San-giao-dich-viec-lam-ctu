@@ -220,11 +220,11 @@ main {
     cursor: pointer;
     display: block;
     background: #FFAE28;
-    height: 36px;
+    height: 40px;
     width: 50%;
     margin: 0 auto;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 2px;
     border-radius: 4px;
     font-size: 14px;
     line-height: 16px;
