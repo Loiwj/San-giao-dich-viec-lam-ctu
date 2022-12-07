@@ -174,7 +174,7 @@ btn_unfilter_job.addEventListener('click',function(){
 var sort_day = document.getElementById('sort_day')
 var loading_cv = document.getElementById('loading_cv');
 sort_day.addEventListener('change',function(){
-  var html ;
+  let html ;
   if(sort_day.value === "1"){
     html =  `
     <option value="1">Ngày đăng cũ nhất</option>
@@ -202,5 +202,52 @@ sort_day.addEventListener('change',function(){
 //Xử lí khi click vào select sort_value
 var sort_value = document.getElementById('sort_value');
 sort_value.addEventListener('change',function(){
-
+  let html ;
+  if(sort_value.value === "0"){
+ html = ` <option value="0">20 công việc/trang</option>
+ <option value="2">50 công việc/trang</option>
+ <option value="3">100 công việc/trang</option>
+ <option value="4">150 công việc/trang</option>`
+ loading_cv.classList.add('loading');
+ setTimeout(function(){
+   loading_cv.classList.remove('loading');
+ },2000)
+    sort_value.innerHTML = html;
+  }
+  if(sort_value.value === "1"){
+    html = ` 
+    <option value="2">50 công việc/trang</option>
+    <option value="0">20 công việc/trang</option>
+    <option value="3">100 công việc/trang</option>
+    <option value="4">150 công việc/trang</option>`
+    loading_cv.classList.add('loading');
+    setTimeout(function(){
+      loading_cv.classList.remove('loading');
+    },2000)
+    sort_value.innerHTML = html;
+  }
+  if(sort_value.value === "2"){
+    html = ` 
+    <option value="3">100 công việc/trang</option>
+    <option value="0">20 công việc/trang</option>
+    <option value="2">50 công việc/trang</option>
+    <option value="4">150 công việc/trang</option>`
+    loading_cv.classList.add('loading');
+    setTimeout(function(){
+      loading_cv.classList.remove('loading');
+    },2000)
+    sort_value.innerHTML = html;
+  }
+  if(sort_value.value === "3"){
+    html = ` 
+    <option value="4">150 công việc/trang</option>
+    <option value="0">20 công việc/trang</option>
+    <option value="2">50 công việc/trang</option>
+    <option value="3">100 công việc/trang</option>`
+    loading_cv.classList.add('loading');
+    setTimeout(function(){
+      loading_cv.classList.remove('loading');
+    },2000)
+    sort_value.innerHTML = html;
+  }
 })
