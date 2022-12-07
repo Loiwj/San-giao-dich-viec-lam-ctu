@@ -227,9 +227,11 @@
             <h2 id="v_main_heading">TỔNG HỢP MẪU CV XIN VIỆC CHUẨN VÀ ĐẸP NHẤT HIỆN NAY 2022</h2>
             <div id="v_main_flex">
                 <div class="v_main_flex_detail">
-                    <div id="v_cv_with_job">
-                        <p id="v_cv_heading">LỌC CV THEO NGÀNH NGHỀ</p>
-                        <div class="form_fillter">
+                    <div id="v_cv_with_job" style="height: auto; overflow: unset;">
+                        <p id="v_cv_heading" class="background_loc">LỌC CV THEO NGÀNH NGHỀ
+                            
+                        </p>
+                        <div class="form_fillter " style="top: 1px; display: none;">
                             <form id="v_cv_search" action="">
                                 <input type="text" id="v_cv_search_input" autocomplete="Off"
                                     placeholder="Tìm kiếm theo ngành nghề">
@@ -1285,6 +1287,8 @@
         crossorigin="anonymous"></script>
 
   <script  src="./assets/js/base.js"></script>
+  <script src="./assets/js/jquery-ui.js"></script>
+  <script src="./assets/js/jquery.validate.min.js"></script>
 
     <!-- <script src="./assets/js/CV.js"></script> -->
     <!-- <script>
@@ -1326,7 +1330,45 @@
 
 
     </script> -->
+    <script>
+        var width = $(window).width();
+if (width <= 1024) {
+    $('#v_cv_heading').addClass('background_loc');
+    $('#v_cv_heading').html('Chọn cv theo ngành nghề<img class="img_arrow_down " src="/images/arrow_down1.svg" >');
+    $('#v_cv_with_job').click(function() {
+        $('#v_cv_with_job').css({
+            'height': "auto",
+            'overflow': 'unset'
+        })
+        $('.form_fillter').css({
+            'top': '1px'
+        })
+    })
 
+    $(document).mouseup(function(e) {
+        if ($('.form_fillter').css('display') !== 'none') {
+            var container = $('#v_cv_with_job');
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.form_fillter').hide()
+            }
+        } else {
+            console.log('11')
+            $('#v_cv_with_job').click(function() {
+                $('#v_cv_with_job').css({
+                    'height': "auto",
+                    'overflow': 'unset'
+                })
+                $('.form_fillter').css({
+                    'top': '1px',
+                    'display': 'block'
+                })
+            })
+        }
+    });
+}
+    </script>
 </body>
 
 </html>
