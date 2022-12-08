@@ -339,4 +339,4 @@ $(".form-search").submit(function (e) {
 var loading = document.querySelector(".loading");
 setTimeout(function () {
     loading.classList.remove("loading");
-}, 2000);
+}, 1000);
