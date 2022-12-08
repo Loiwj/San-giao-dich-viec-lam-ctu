@@ -185,26 +185,26 @@
 
                         <div id='branding-details'>
 
-                            <div id='location' class='my-hover-transition branding-info'>
+                            <div id='location' class='my-hover-transition branding-info' onclick='brandingLocation()'>
                                 <i class="fa fa-location-arrow my-icon-padding"></i><span>TP. Hồ Chí Minh</span>
                             </div>
 
                             <br>
 
-                            <div id='link' class='my-hover-transition branding-info'>
+                            <div id='link' class='my-hover-transition branding-info' onclick='brandingWebaddress()'>
                                 <i class="fa fa-link my-icon-padding"></i><span>https://gobranding.com.vn/</span>
                             </div>
 
                             <br>
 
-                            <div id='phone-number' class='my-hover-transition branding-info'>
+                            <div id='phone-number' class='my-hover-transition branding-info' onclick="brandingPhonenumber('0913713679')">
                                 <i class='fa fa-phone my-icon-padding'></i><span>0913713679</span>
                             </div>
 
                             <br>
 
-                            <div id='email' class='my-hover-transition branding-info'>
-                                <i class='fa fa-envelope my-icon-padding'></i><span> trandnn@gobranding.com.vn</span>
+                            <div id='email' class='my-hover-transition branding-info' onclick='brandingEmail()'>
+                                <i class='fa fa-envelope my-icon-padding'></i><a style='color: inherit; text-decoration: inherit; cursor: inherit;' href="mailto:trandnn@gobranding.com.vn">trandnn@gobranding.com.vn</a>
                             </div>
 
                         </div>
@@ -467,7 +467,7 @@
                             <button data-dismiss="modal" aria-label="Close" data-toggle="modal"
                                 data-target="#loginModal" type="button" class="btn btn-warning close"
                                 style="float: left;">Đăng
-                                Ký</button>
+                                Nhập</button>
                             <button class="btn btn-primary" type="submit" style="float: right;">Đăng Nhập</button>
                         </form>
                     </div>
@@ -516,6 +516,31 @@
         
         // data-toggle="modal" data-target="#loginModal" type="button" class="btn"
     </script>
+    
+    <script>
+            
+        function brandingLocation()
+        {
+            window.open('https://www.google.com/maps/place/Ho+Chi+Minh+City,+Vietnam/@10.7835671,106.644267,11z/data=!4m6!3m5!1s0x317529292e8d3dd1:0xf15f5aad773c112b!8m2!3d10.8230989!4d106.6296638!16zL20vMGhuNGg?hl=en&gl=vn');
+        }
+        
+        function brandingWebaddress()
+        {
+            window.open('https://gobranding.com.vn/');
+        }
+        
+        function brandingPhonenumber(TextToCopy) {
+          var TempText = document.createElement("input");
+          TempText.value = TextToCopy;
+          document.body.appendChild(TempText);
+          TempText.select();
+  
+          document.execCommand("copy");
+          document.body.removeChild(TempText);
+          }
+          
+        
+        </script>
 </body>
 
 </html>
