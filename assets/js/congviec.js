@@ -183,7 +183,7 @@ sort_day.addEventListener('change',function(){
       loading_cv.classList.add('loading');
       setTimeout(function(){
         loading_cv.classList.remove('loading');
-      },2000)
+      },1000)
       sort_day.innerHTML = html;
   }
   else{
@@ -194,7 +194,7 @@ sort_day.addEventListener('change',function(){
    loading_cv.classList.add('loading');
    setTimeout(function(){
      loading_cv.classList.remove('loading');
-   },2000)
+   },1000)
    sort_day.innerHTML = html;
   }
 })
@@ -211,7 +211,7 @@ sort_value.addEventListener('change',function(){
  loading_cv.classList.add('loading');
  setTimeout(function(){
    loading_cv.classList.remove('loading');
- },2000)
+ },1000)
     sort_value.innerHTML = html;
   }
   if(sort_value.value === "1"){
@@ -223,7 +223,7 @@ sort_value.addEventListener('change',function(){
     loading_cv.classList.add('loading');
     setTimeout(function(){
       loading_cv.classList.remove('loading');
-    },2000)
+    },1000)
     sort_value.innerHTML = html;
   }
   if(sort_value.value === "2"){
@@ -235,7 +235,7 @@ sort_value.addEventListener('change',function(){
     loading_cv.classList.add('loading');
     setTimeout(function(){
       loading_cv.classList.remove('loading');
-    },2000)
+    },1000)
     sort_value.innerHTML = html;
   }
   if(sort_value.value === "3"){
@@ -247,7 +247,7 @@ sort_value.addEventListener('change',function(){
     loading_cv.classList.add('loading');
     setTimeout(function(){
       loading_cv.classList.remove('loading');
-    },2000)
+    },1000)
     sort_value.innerHTML = html;
   }
 })
