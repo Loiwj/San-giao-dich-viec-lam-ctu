@@ -123,26 +123,26 @@
 
                 <div id='branding-details'>
 
-                <div id='location' class='my-hover-transition branding-info'>
+                <div id='location' class='my-hover-transition branding-info' onclick='brandingLocation()'>
                 <i class="fa fa-location-arrow my-icon-padding"></i><span>TP. Hồ Chí Minh</span>
                 </div>
 
                 <br>
                 
-                <div id='link' class='my-hover-transition branding-info'>
+                <div id='link' class='my-hover-transition branding-info' onclick='brandingWebaddress()'>
                         <i class="fa fa-link my-icon-padding"></i><span>http://www.fpts.com.vn/</span>
                     </div>
 
                 <br>
                 
-                <div id='phone-number' class='my-hover-transition branding-info'>
+                <div id='phone-number' class='my-hover-transition branding-info' onclick="brandingPhonenumber('19006446')">
                         <i class='fa fa-phone my-icon-padding'></i><span>19006446</span>
                     </div>
 
                 <br>
                     
                     <div id='email' class='my-hover-transition branding-info'>
-                            <i class='fa fa-envelope my-icon-padding'></i><span>phongnhansu.hcm@fpts.com.vn</span>
+                            <i class='fa fa-envelope my-icon-padding'></i><a style='color: inherit; text-decoration: inherit; cursor: inherit;' href="mailto:phongnhansu.hcm@fpts.com.vn">phongnhansu.hcm@fpts.com.vn</a>
                         </div>
 
                         </div>
@@ -156,19 +156,24 @@
                                 
                                 <div id='button-holder'>
                                 
-                                <div id='my-apply-job'> <!-- Bắt đầu nút nộp đơn -->
-                                    <i class='fa fa-location-arrow my-icon-padding'></i><span>Nộp đơn</span>
-                                    </div> <!-- Kết thúc nút nộp đơn -->
+                                <button type="button"
+                            id="my-apply-job"><i class='fa fa-location-arrow my-icon-padding'></i><span>Nộp đơn</span>
+                            Đăng Ký</button>
+
+                        <!-- Bắt đầu nút nộp đơn -->
+
+                        </button> <!-- Kết thúc nút nộp đơn -->
                                         
                                         </div>
                                         
                                         <br>
                                         
-                                        <div id='my-other-job'> <!-- Bắt đầu nút tìm việc khác -->
-                                            
-                                            <i class='fa fa-briefcase my-icon-padding'></i><span>Tìm việc khác</span>
-                                                
-                                            </div> <!-- Kết thúc nút tìm việc khác -->
+                                        <a id='my-other-job' href="./congviec_page1.html">
+                        <!-- Bắt đầu nút tìm việc khác -->
+
+                        <i class='fa fa-briefcase my-icon-padding'></i><span>Tìm việc khác</span>
+
+                    </a> <!-- Kết thúc nút tìm việc khác -->
                                                 
                                                    </div> <!-- Kết thúc thương hiệu -->
 
@@ -426,6 +431,56 @@
             crossorigin="anonymous"></script>
             <script src="./assets/js/base.js"></script>
         <script src="./assets/js/trangchu.js"></script>
+
+        <script>
+        var nopdon = document.querySelector("#my-apply-job")
+        nopdon.addEventListener("click", function (e) {
+            if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
+                let dataToggle = document.createAttribute('data-toggle');
+                dataToggle.value = "modal"
+                let dataTarget = document.createAttribute("data-target")
+                dataTarget.value = "#loginModal"
+                let dataClass = document.createAttribute("class")
+                dataClass.value = "btn"
+               this.setAttributeNode(dataToggle)
+               this.setAttributeNode(dataTarget)
+               this.setAttributeNode(dataClass)
+               
+            }
+            else{
+                window.location = "./CV.html"
+            }
+        })
+        
+        // data-toggle="modal" data-target="#loginModal" type="button" class="btn"
+    </script>
+    
+    <script>
+            
+        function brandingLocation()
+        {
+            window.open('https://www.google.com/maps/place/Ho+Chi+Minh+City,+Vietnam/@10.7835671,106.644267,11z/data=!4m6!3m5!1s0x317529292e8d3dd1:0xf15f5aad773c112b!8m2!3d10.8230989!4d106.6296638!16zL20vMGhuNGg?hl=en&gl=vn');
+        }
+        
+        function brandingWebaddress()
+        {
+            window.open('http://www.fpts.com.vn/');
+        }
+        
+        function brandingPhonenumber(TextToCopy) {
+          var TempText = document.createElement("input");
+          TempText.value = TextToCopy;
+          document.body.appendChild(TempText);
+          TempText.select();
+  
+          document.execCommand("copy");
+          document.body.removeChild(TempText);
+
+          alert ('Đẫ sao chép số điện thoại');
+          }
+          
+        
+        </script>
 
 </body>
 
