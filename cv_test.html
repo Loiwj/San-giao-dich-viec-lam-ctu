@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/congviec.css">
     <link rel="stylesheet" href="./assets/css/reponsive_congviec.css">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/CV.css">
 </head>
 
 <body>
@@ -485,9 +486,7 @@
                                 <div class="flex-content">
                                     <div class="background">
                                         <div class="behind_background">
-                                            <p class="behind_content" href="" onclick="show_login(this);">
-                                                Tạo CV mới
-                                            </p>
+                                            <button  type="button" class="btn canhgiua btn-outline-light me-2 taovc">Tạo CV+ </button>
                                         </div>
                                         <a href="">
                                             <img class="main-img" src="./assets/images/all1.png" alt="">
@@ -763,5 +762,30 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="./assets/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
-
+    <script>
+        document.addEventListener("click", function (e){
+            console.log(e.target, e.target.classList.contains("taocv"));
+    if(!e.target.classList.contains("taocv") ){
+        var nopdon = document.querySelector(".taovc")
+            nopdon.addEventListener("click", function (e) {
+                if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
+                    let dataToggle = document.createAttribute('data-toggle');
+                    dataToggle.value = "modal"
+                    let dataTarget = document.createAttribute("data-target")
+                    dataTarget.value = "#loginModal"
+                    let dataClass = document.createAttribute("class")
+                    dataClass.value = "btn"
+                   this.setAttributeNode(dataToggle)
+                   this.setAttributeNode(dataTarget)
+                   this.setAttributeNode(dataClass)
+                   
+                }
+                else{
+                    window.location = "./Tao_CV.html"
+                }
+            })
+    }
+        })
+        
+    </script>
 </html>
