@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="./assets/css/congviec.css">
     <link rel="stylesheet" href="./assets/css/reponsive_congviec.css">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/CV.css">
 </head>
 
 <body>
@@ -491,19 +490,19 @@
                                                 CV+
                                         </div>
                                         <a href="">
-                                            <img class="main-img" src="./assets/images/all1.png" alt="">
+                                            <img class="main-img" src="./assets/images/images/all1.jpg" alt="">
                                         </a>
                                     </div>
                                     <div class="bottom">
                                         <center class="main_color">
-                                            <button class="btn-color" data-cv_id="13" data-color_cv="#cad3df"
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#cad3df"
                                                 style="background: #cad3df; "></button>
-                                            <button class="btn-color" data-cv_id="13" data-color_cv="#d4c1c1"
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#d4c1c1"
                                                 style="background: #d4c1c1; "></button>
-                                            <button class="btn-color" data-cv_id="13" data-color_cv="#d4c9da"
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#d4c9da"
                                                 style="background: #d4c9da; "></button>
                                         </center>
-                                        <h3 class="title-bottom">CV Kế Toán 13</h3>
+                                        <h3 class="title-bottom">CV Bảo Hiểm 1</h3>
                                     </div>
                                 </div>
 
@@ -767,24 +766,25 @@
     <script src="./assets/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
     <script>
         document.addEventListener("click", function (e) {
-            console.log(e.target, e.target.tagName.toLowerCase() === "button");
-            console.log(JSON.parse(sessionStorage.getItem("isDisable")));
             if (e.target.tagName.toLowerCase() === "button") {
                 var nopdon = document.querySelector(".taovc")
-                if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
+                nopdon.addEventListener('click',function(e){
+                    if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
                     let dataToggle = document.createAttribute('data-toggle');
                     dataToggle.value = "modal"
                     let dataTarget = document.createAttribute("data-target")
                     dataTarget.value = "#loginModal"
                     let dataClass = document.createAttribute("class")
                     dataClass.value = "btn canhgiua btn-outline-light me-2 taovc"
-                    nopdon.setAttributeNode(dataToggle)
-                    nopdon.setAttributeNode(dataTarget)
-                    nopdon.setAttributeNode(dataClass)
+                    this.setAttributeNode(dataToggle)
+                    this.setAttributeNode(dataTarget)
+                    this.setAttributeNode(dataClass)
                 }
                 else {
                     window.location = "./Tao_CV.html"
                 }
+                })
+               
             }
         })
 
