@@ -121,7 +121,7 @@ ul {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
     
     /* For mobile */
 
@@ -148,7 +148,7 @@ ul {
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
 
   /* For desktop: */
 
