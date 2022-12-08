@@ -1366,7 +1366,7 @@ background-image: url(/images/star_sang.svg); */
         text-align: left !important;
         padding-left: 12px;
     }
-    img.img_arrow_down {
+    i.img_arrow_down {
         height: 12px;
         width: 22px;
     }
