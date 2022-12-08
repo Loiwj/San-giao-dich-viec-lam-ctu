@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/cv_test.css">
     <link rel="stylesheet" href="./assets/css/congviec.css">
     <link rel="stylesheet" href="./assets/css/reponsive_congviec.css">
     <link rel="stylesheet" href="./assets/css/base.css">
 </head>
 
 <body>
-    <div class="loading">Loading&#8230;</div>
+    <div class="loading" id="loading_cv"></div>
     <div class="app">
         <header class="header wow">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-nav">
@@ -173,184 +174,343 @@
     </div>
     <main>
         <article>
-            <article>
-                <section>
-                    <div class="container wow">
-                        <div class="row no-gape">
-                            <div class="col-lg-3">
-                                <div class="flex-shrink-0 p-3 bg-white">
-                                    <ul class="list-unstyled ps-0">
-                                        <li class="mb-1 slidebar">
-                                            <button class="btn btn-toggle align-items-center rounded "
-                                                data-bs-toggle="collapse" data-bs-target="#orders-collapse"
-                                                aria-expanded="true">
-                                                Lọc CV THEO NGHÀNH NGHỀ
-                                            </button>
-                                            <div class="collapse show" id="orders-collapse">
-                                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                                    <div id="v_cv_with_job">
-                                                        <p id="v_cv_heading">LỌC CV THEO NGÀNH NGHỀ</p>
-                                                        <div class="form_fillter">
-                                                            <form id="v_cv_search" action="">
-                                                                <input type="text" id="v_cv_search_input"
-                                                                    autocomplete="Off"
-                                                                    placeholder="Tìm kiếm theo ngành nghề">
-                                                                <button id="v_cv_search_btn"><img
-                                                                        src="https://vieclam123.vn/images/v_cv_search.svg"
-                                                                        alt="Search"></button>
-                                                            </form>
-                                                            <hr id="v_cv_search_hr">
-                                                            <div id="v_cv_profession">
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec/"
-                                                                    class="v_cv_link">Tất Cả Các Ngành Nghề </a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-cho-sinh-vien-moi-ra-truong/"
-                                                                    class="v_cv_link">Sinh viên mới ra trường - Chưa tốt
-                                                                    nghiệp</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-ke-toan/"
-                                                                    class="v_cv_link">Kế Toán</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-it-cong-nghe-thong-tin/"
-                                                                    class="v_cv_link">IT - Công Nghệ Thông Tin</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-xay-dung/"
-                                                                    class="v_cv_link">Xây dựng</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-nhan-vien-kinh-doanh/"
-                                                                    class="v_cv_link">Kinh doanh</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-marketing/"
-                                                                    class="v_cv_link">Marketing</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-part-time/"
-                                                                    class="v_cv_link">Part time - Làm thêm - Bán Thời
-                                                                    Gian</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nhan-vien-ban-hang/"
-                                                                    class="v_cv_link">Bán hàng</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-ngan-hang/"
-                                                                    class="v_cv_link">Ngân hàng - Tài chính</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-developers/"
-                                                                    class="v_cv_link">Developers</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-y-te-duoc/"
-                                                                    class="v_cv_link">Y tế - Dược</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-thiet-ke-do-hoa/"
-                                                                    class="v_cv_link">Thiết kế đồ họa - Mỹ thuật</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-hanh-chinh-nhan-su/"
-                                                                    class="v_cv_link">Hành chính nhân sự</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-kien-truc-su/"
-                                                                    class="v_cv_link">Kiến trúc nội thất</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-tro-giang-tieng-anh/"
-                                                                    class="v_cv_link">Trợ Giảng Tiếng Anh</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-le-tan/"
-                                                                    class="v_cv_link">Lễ Tân</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-giao-vien/"
-                                                                    class="v_cv_link">Giáo Viên</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-lai-xe/"
-                                                                    class="v_cv_link">Vận tải - Lái xe</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-ky-su-co-khi/"
-                                                                    class="v_cv_link">Kỹ sư Cơ khí</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-ky-su-dien-dien-tu/"
-                                                                    class="v_cv_link">Điện - điện tử</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-cham-soc-khach-hang/"
-                                                                    class="v_cv_link">Chăm sóc khách hàng</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nha-hang-khach-san/"
-                                                                    class="v_cv_link">Nhà hàng - Khách sạn</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-xuat-nhap-khau/"
-                                                                    class="v_cv_link">Xuất nhập khẩu</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-hanh-chinh-van-phong/"
-                                                                    class="v_cv_link">Hành chính văn phòng</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-quan-ly/"
-                                                                    class="v_cv_link">Quản lý - Điều hành</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-ky-thuat/"
-                                                                    class="v_cv_link">Kỹ Thuật</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-luat/"
-                                                                    class="v_cv_link">Luật - Pháp lý</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-phuc-vu/"
-                                                                    class="v_cv_link">Phục Vụ</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-telesales/"
-                                                                    class="v_cv_link">Telesales</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-nganh-logistics/"
-                                                                    class="v_cv_link">Logistics</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-dau-bep-phu-bep/"
-                                                                    class="v_cv_link">Đầu bếp - Phụ bếp</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-tro-ly-giam-doc/"
-                                                                    class="v_cv_link">Thư ký - trợ lý</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-cong-nghe-thuc-pham/"
-                                                                    class="v_cv_link">Công nghệ thực phẩm</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-du-lich/"
-                                                                    class="v_cv_link">Du lịch</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-quan-ly-san-xuat/"
-                                                                    class="v_cv_link">Vận hành - Quản lý sản xuất</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-thu-ngan/"
-                                                                    class="v_cv_link">Thu Ngân</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-thiet-ke-thoi-trang/"
-                                                                    class="v_cv_link">Thiết kế thời trang</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bien-phien-dich/"
-                                                                    class="v_cv_link">Biên phiên dịch</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-quan-tri-kinh-doanh/"
-                                                                    class="v_cv_link">Quản trị kinh doanh</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bat-dong-san/"
-                                                                    class="v_cv_link">Bất động sản</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-to-chuc-su-kien/"
-                                                                    class="v_cv_link">Tổ Chức Sự Kiện</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-copywriter/"
-                                                                    class="v_cv_link">Copywriter</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-nhan-vien-tu-van/"
-                                                                    class="v_cv_link">Tư vấn viên</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-trai-nganh/"
-                                                                    class="v_cv_link">Trái Ngành</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-seo-website/"
-                                                                    class="v_cv_link">SEO Website</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-spa/"
-                                                                    class="v_cv_link">Làm đẹp - Spa</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bao-hiem/"
-                                                                    class="v_cv_link">Bảo Hiểm</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-nganh-dien-tu-vien-thong/"
-                                                                    class="v_cv_link">Điện tử viễn thông</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-thu-y/"
-                                                                    class="v_cv_link">Chăn nuôi thú y</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-truyen-thong/"
-                                                                    class="v_cv_link">Truyền Thông</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bao-ve/"
-                                                                    class="v_cv_link">Bảo Vệ</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-nganh-may/"
-                                                                    class="v_cv_link">Dệt May - Da Giày</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-xin-viec-bao-tri/"
-                                                                    class="v_cv_link">Bảo Trì</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-nhan-vien-thong-ke/"
-                                                                    class="v_cv_link">Thống Kê</a>
-                                                                <a href="https://vieclam123.vn/mau-cv-nganh-nghe-khac/"
-                                                                    class="v_cv_link">Ngành nghề khác</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </ul>
-                                            </div>
-                                        </li>
+            <section>
+                <div class="row no-gape" style="margin-top: 40px;">
+                    <h2 id="main_heading">Danh sách Mẫu CV xin việc Kế Toán hoàn chỉnh ấn tượng nhất 2022</h2>
+                    <div class="col-lg-3">
+                        <div class="flex-shrink-0 p-3 bg-white">
+                            <ul class="list-unstyled ps-0">
+                                <li class="mb-1 slidebar">
+                                    <button class="btn btn-toggle align-items-center rounded " data-bs-toggle="collapse"
+                                        data-bs-target="#orders-collapse" aria-expanded="true">
+                                        Lọc CV theo nghành nghề
+                                    </button>
+                                    <div class="collapse show" id="orders-collapse">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Tất cả các nghành nghề</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Sinh viên mới ra trường - Chưa tốt
+                                                        nghiệp</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Kế Toán</a>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">IT - Công Nghệ Thông Tin</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Xây dựng</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Kinh doanh</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Marketing</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv"> Part time - Làm thêm</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Bán hàng</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Ngân hàng - Tài chính</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Developers</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Y tế - Dược </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Thiết kế đồ hoạ mỹ thuật</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Hành chính nhân sự</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="" class="link-cv">Kiến trúc nội thất</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="link-cv">Trợ giảng Tiếng Anh</a>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Lễ tân</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Giáo viên</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Vận tải - lái xe</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Kỹ sư cơ khí</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Điện - điện tử</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Chăm sóc khác hàng</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Nhà hàng - khách sạn</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Xuất nhập khẩu</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Hành chính văn phòng</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Quản lý - điều hành</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Luật - Pháp lý</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Phục vụ</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Telesales</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Logistics</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Đầu bếp - Phụ bếp</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Thư ký - trợ lý</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Công nghệ thực phẩm</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Du lịch</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Vận hành - Quản lý sản xuất</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Thu ngân</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Thiết kế thời trang</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">biên phiên dịch</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Quản trị kinh doanh</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Bất động sản</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Tổ chức sự kiện</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Copywrite</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Tư vấn viên</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Trái nghành</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">SEO website</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Làm đẹp - Spa</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Bảo Hiểm</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Điện tử viễn thông</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Chăn nuôi thú y</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Truyền thông</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Bảo vệ</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Dệt may - Da giày</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Bảo trì</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Thống kê</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="mtb">
+                                                    <a href="" class="link-cv">Nghành nghề khác</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
 
-                                    </ul>
-
-                                </div>
-                                <button id="btn_filter_job" class="btn-filter-job">
-                                    <i class="la la-filter"></i>
-                                    Lọc công việc
-                                </button>
-                                <button id="btn_unfilter_job" class="btn-filter-job" style="background:#9c9c9c;">
-                                    Loại bỏ lọc
-                                </button>
-                                <div class="banner_widget">
-                                    <a href="https://hyosungjobs.com/hyosung-gongchae" target="_self"><img
-                                            src="./assets/images/1_artboard-5-50.jpg" alt=""></a>
-                                </div>
-                                <div class="banner_widget">
-                                    <a href="https://dsa.ueh.edu.vn/viec-lam/bao-hiem-bao-long-tuyen-dung/"
-                                        target="_self"><img src="./assets/images/1_post-tuyen-dung-x263-01-01.jpg"
-                                            alt=""></a>
-                                </div>
+                            </ul>
+                            <div class="banner_widget">
+                                <a href="#" target="_self"><img src="./assets/images/mau-cv-xin-viec-vieclam123.png"
+                                        alt=""></a>
                             </div>
-                            <div class="column col-lg-9">
-
-                            </div>
-
                         </div>
 
                     </div>
-                </section>
-            </article>
+                    <div class="column col-lg-9">
+                        <div class="type-cv">
+                            <div class="chose-type-cv cv-1-page type-active">
+                                <a href="#">Mẫu CV 1 trang</a>
+                            </div>
+                            <div class="chose-type-cv-2">
+                                <a href="#">Mẫu CV 2 trang</a>
+                            </div>
+                        </div>
+                        <div id="main-cv">
+                            <p class="title-h2">Tổng hợp mẫu CV 1 trang đẹp nhất</p>
+                            <div class="main-flex">
+                                <div class="flex-content">
+                                    <div class="background">
+                                        <div class="behind_background">
+                                            <p class="behind_content" href=""
+                                                onclick="show_login(this);">
+                                             Tạo CV mới
+                                            </p>
+                                        </div>
+                                        <a href="">
+                                            <img class="main-img" src="./assets/images/all1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="bottom">
+                                        <center class="v_template_cv_color">
+                                            <button class="v_cv_yellow v_cv_color2" data-cv_id="13"
+                                                data-color_cv="#cad3df" style="background: #cad3df; "></button>
+                                            <button class="v_cv_yellow v_cv_color2" data-cv_id="13"
+                                                data-color_cv="#d4c1c1" style="background: #d4c1c1; "></button>
+                                            <button class="v_cv_yellow v_cv_color2" data-cv_id="13"
+                                                data-color_cv="#d4c9da" style="background: #d4c9da; "></button>
+                                        </center>
+                                        <h3 class="title-bottom">CV Kế Toán 13</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </article>
     </main>
     <footer class="text-center text-lg-start bg-dark text-muted wow">
