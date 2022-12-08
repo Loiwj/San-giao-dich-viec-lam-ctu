@@ -486,13 +486,9 @@
                                 <div class="flex-content">
                                     <div class="background">
                                         <div class="behind_background">
-<<<<<<< HEAD
-                                            <button  type="button" class="btn canhgiua btn-outline-light me-2 taovc">Tạo CV+ </button>
-=======
-                                            <button class="behind_content" href="" >
-                                                Tạo CV mới
-                                            </button>
->>>>>>> 3edac53b6f4e1948267fbbcff4aec1b72150e449
+                                            <button type="button" class="btn canhgiua btn-outline-light me-2 taovc"
+                                                data-toggle="modal" data-target="#loginModal">Tạo
+                                                CV+
                                         </div>
                                         <a href="">
                                             <img class="main-img" src="./assets/images/all1.png" alt="">
@@ -500,85 +496,17 @@
                                     </div>
                                     <div class="bottom">
                                         <center class="main_color">
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#cad3df" style="background: #cad3df; "></button>
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#d4c1c1" style="background: #d4c1c1; "></button>
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#d4c9da" style="background: #d4c9da; "></button>
+                                            <button class="btn-color" data-cv_id="13" data-color_cv="#cad3df"
+                                                style="background: #cad3df; "></button>
+                                            <button class="btn-color" data-cv_id="13" data-color_cv="#d4c1c1"
+                                                style="background: #d4c1c1; "></button>
+                                            <button class="btn-color" data-cv_id="13" data-color_cv="#d4c9da"
+                                                style="background: #d4c9da; "></button>
                                         </center>
                                         <h3 class="title-bottom">CV Kế Toán 13</h3>
                                     </div>
                                 </div>
-                                <div class="flex-content">
-                                    <div class="background">
-                                        <div class="behind_background">
-                                            <button class="behind_content" href="" >
-                                                Tạo CV mới
-                                            </button>
-                                        </div>
-                                        <a href="">
-                                            <img class="main-img" src="./assets/images/all1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="bottom">
-                                        <center class="main_color">
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#cad3df" style="background: #cad3df; "></button>
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#d4c1c1" style="background: #d4c1c1; "></button>
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#d4c9da" style="background: #d4c9da; "></button>
-                                        </center>
-                                        <h3 class="title-bottom">CV Kế Toán 13</h3>
-                                    </div>
-                                </div>
-                                <div class="flex-content">
-                                    <div class="background">
-                                        <div class="behind_background">
-                                            <button class="behind_content" href="" >
-                                                Tạo CV mới
-                                            </button>
-                                        </div>
-                                        <a href="">
-                                            <img class="main-img" src="./assets/images/all1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="bottom">
-                                        <center class="main_color">
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#cad3df" style="background: #cad3df; "></button>
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#d4c1c1" style="background: #d4c1c1; "></button>
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#d4c9da" style="background: #d4c9da; "></button>
-                                        </center>
-                                        <h3 class="title-bottom">CV Kế Toán 13</h3>
-                                    </div>
-                                </div>
-                                <div class="flex-content">
-                                    <div class="background">
-                                        <div class="behind_background">
-                                            <button class="behind_content" href="" >
-                                                Tạo CV mới
-                                            </button>
-                                        </div>
-                                        <a href="">
-                                            <img class="main-img" src="./assets/images/images/all1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="bottom">
-                                        <center class="main_color">
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#cad3df" style="background: #cad3df; "></button>
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#d4c1c1" style="background: #d4c1c1; "></button>
-                                            <button class="btn-color" data-cv_id="13"
-                                                data-color_cv="#d4c9da" style="background: #d4c9da; "></button>
-                                        </center>
-                                        <h3 class="title-bottom">CV Kế Toán 13</h3>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -838,29 +766,29 @@
         crossorigin="anonymous"></script>
     <script src="./assets/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
     <script>
-        document.addEventListener("click", function (e){
-            console.log(e.target, e.target.classList.contains("taocv"));
-    if(!e.target.classList.contains("taocv") ){
-        var nopdon = document.querySelector(".taovc")
-            nopdon.addEventListener("click", function (e) {
+        document.addEventListener("click", function (e) {
+            console.log(e.target, e.target.tagName.toLowerCase() === "button");
+            console.log(JSON.parse(sessionStorage.getItem("isDisable")));
+            if (e.target.tagName.toLowerCase() === "button") {
+                var nopdon = document.querySelector(".taovc")
                 if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
                     let dataToggle = document.createAttribute('data-toggle');
                     dataToggle.value = "modal"
                     let dataTarget = document.createAttribute("data-target")
                     dataTarget.value = "#loginModal"
                     let dataClass = document.createAttribute("class")
-                    dataClass.value = "btn"
-                   this.setAttributeNode(dataToggle)
-                   this.setAttributeNode(dataTarget)
-                   this.setAttributeNode(dataClass)
-                   
+                    dataClass.value = "btn canhgiua btn-outline-light me-2 taovc"
+                    nopdon.setAttributeNode(dataToggle)
+                    nopdon.setAttributeNode(dataTarget)
+                    nopdon.setAttributeNode(dataClass)
                 }
-                else{
+                else {
                     window.location = "./Tao_CV.html"
                 }
-            })
-    }
+            }
         })
-        
+
+
     </script>
+
 </html>
