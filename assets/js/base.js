@@ -257,80 +257,80 @@ $(".form-search").submit(function (e) {
     }
 
     if (!searchValue.province.includes('Tất cả') && !searchValue.province.includes("TP. Hồ Chí Minh")) {
-        window.location = "../../kythuat_congnghe.html"
+        window.location = "./kythuat_congnghe.html"
     } else {
         console.log(searchValue.job);
         switch (Number(searchValue.job)) {
             case 0: {
-                window.location.href = "../../congviec_page1.html"
+                window.location.href = "./congviec_page1.html"
                 break;
             }
             case 1: {
-                window.location.href = "../../dichvutaichinh.html";
+                window.location.href = "./dichvutaichinh.html";
                 break;
             }
             case 2: {
-                window.location.href = "../../truyenthong.html";
+                window.location.href = "./truyenthong.html";
                 break;
             }
             case 3: {
-                window.location.href = "../../hangtieudungvabanle.html"
+                window.location.href = "./hangtieudungvabanle.html"
                 break;
             }
             case 4: {
-                window.location.href = "../../khachsanvadulich.html"
+                window.location.href = "./khachsanvadulich.html"
                 break;
             }
             case 5: {
-                window.location.href = "../../kythuat_congnghe.html"
+                window.location.href = "./kythuat_congnghe.html"
                 break;
             }
             case 6: {
-                window.location.href = "../../xaydung.html"
+                window.location.href = "./xaydung.html"
                 break;
             }
             case 7: {
-                window.location.href = "../../vantai.html"
+                window.location.href = "./vantai.html"
                 break;
             }
             case 8: {
-                window.location.href = "../../dichvu.html"
+                window.location.href = "./dichvu.html"
                 break;
             }
             case 9: {
-                window.location.href = "../../giaodichkhachhang.html"
+                window.location.href = "./giaodichkhachhang.html"
                 break;
             }
             case 10: {
-                window.location.href = "../../bophanhotro.html"
+                window.location.href = "./bophanhotro.html"
                 break;
             }
             case 11: {
-                window.location.href = "../../kythuat.html"
+                window.location.href = "./kythuat.html"
                 break;
             }
             case 12: {
-                window.location.href = "../../yte.html"
+                window.location.href = "./yte.html"
                 break;
             }
             case 13: {
-                window.location.href = "../../sanxuat.html"
+                window.location.href = "./sanxuat.html"
                 break;
             }
             case 14: {
-                window.location.href = "../../hotrosanxuat.html"
+                window.location.href = "./hotrosanxuat.html"
                 break;
             }
             case 15: {
-                window.location.href = "../../nhansu.html"
+                window.location.href = "./nhansu.html"
                 break;
             }
             case 16: {
-                window.location.href = "../../kinhdoanh.html"
+                window.location.href = "./kinhdoanh.html"
                 break;
             }
             case 17: {
-                window.location.href = "../../phiendich.html"
+                window.location.href = "./phiendich.html"
                 break;
             }
         }
