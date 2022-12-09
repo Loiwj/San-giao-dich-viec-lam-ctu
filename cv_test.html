@@ -463,7 +463,7 @@
                                 </li>
 
                             </ul>
-                            <div class="banner_widget">
+                            <div class="banner_widget none">
                                 <a href="#" target="_self"><img src="./assets/images/mau-cv-xin-viec-vieclam123.png"
                                         alt=""></a>
                             </div>
@@ -471,16 +471,16 @@
 
                     </div>
                     <div class="column col-lg-9">
-                        <div class="type-cv">
+                        <div class="type-cv ml16">
                             <div class="chose-type-cv cv-1-page type-active">
-                                <a href="#">Mẫu CV 1 trang</a>
+                                <a href="#" style="color: rgb(10, 92, 245);">Mẫu CV 1 trang</a>
                             </div>
                             <div class="chose-type-cv-2">
-                                <a href="#">Mẫu CV 2 trang</a>
+                                <a style="color: rgb(10, 92, 245);" href="#">Mẫu CV 2 trang</a>
                             </div>
                         </div>
                         <div id="main-cv">
-                            <p class="title-h2">Tổng hợp mẫu CV 1 trang đẹp nhất</p>
+                            <p class="title-h2 ml16">Tổng hợp mẫu CV 1 trang đẹp nhất</p>
                             <div class="main-flex">
                                 <div class="flex-content">
                                     <div class="background">
@@ -505,8 +505,54 @@
                                         <h3 class="title-bottom">CV Bảo Hiểm 1</h3>
                                     </div>
                                 </div>
-
+                                <div class="flex-content">
+                                    <div class="background">
+                                        <div class="behind_background">
+                                            <button type="button" class="btn canhgiua btn-outline-light me-2 taovc"
+                                                data-toggle="modal" data-target="#loginModal">Tạo
+                                                CV+
+                                        </div>
+                                        <a href="">
+                                            <img class="main-img" src="./assets/images/images/all2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="bottom">
+                                        <center class="main_color">
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#cad3df"
+                                                style="background: #cad3df; "></button>
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#d4c1c1"
+                                                style="background: #d4c1c1; "></button>
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#d4c9da"
+                                                style="background: #d4c9da; "></button>
+                                        </center>
+                                        <h3 class="title-bottom">CV Bảo Hiểm 2</h3>
+                                    </div>
+                                </div>
+                                <div class="flex-content">
+                                    <div class="background">
+                                        <div class="behind_background">
+                                            <button type="button" class="btn canhgiua btn-outline-light me-2 taovc"
+                                                data-toggle="modal" data-target="#loginModal">Tạo
+                                                CV+
+                                        </div>
+                                        <a href="">
+                                            <img class="main-img" src="./assets/images/images/all3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="bottom">
+                                        <center class="main_color">
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#cad3df"
+                                                style="background: #cad3df; "></button>
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#d4c1c1"
+                                                style="background: #d4c1c1; "></button>
+                                            <button class="btn-color padding" data-cv_id="13" data-color_cv="#d4c9da"
+                                                style="background: #d4c9da; "></button>
+                                        </center>
+                                        <h3 class="title-bottom">CV Chăm sóc khách hàng 13</h3>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -762,23 +808,23 @@
         document.addEventListener("click", function (e) {
             if (e.target.tagName.toLowerCase() === "button") {
                 var nopdon = document.querySelector(".taovc")
-                nopdon.addEventListener('click',function(e){
+                nopdon.addEventListener('click', function (e) {
                     if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
-                    let dataToggle = document.createAttribute('data-toggle');
-                    dataToggle.value = "modal"
-                    let dataTarget = document.createAttribute("data-target")
-                    dataTarget.value = "#loginModal"
-                    let dataClass = document.createAttribute("class")
-                    dataClass.value = "btn canhgiua btn-outline-light me-2 taovc"
-                    this.setAttributeNode(dataToggle)
-                    this.setAttributeNode(dataTarget)
-                    this.setAttributeNode(dataClass)
-                }
-                else {
-                    window.location = "./Tao_CV.html"
-                }
+                        let dataToggle = document.createAttribute('data-toggle');
+                        dataToggle.value = "modal"
+                        let dataTarget = document.createAttribute("data-target")
+                        dataTarget.value = "#loginModal"
+                        let dataClass = document.createAttribute("class")
+                        dataClass.value = "btn canhgiua btn-outline-light me-2 taovc"
+                        this.setAttributeNode(dataToggle)
+                        this.setAttributeNode(dataTarget)
+                        this.setAttributeNode(dataClass)
+                    }
+                    else {
+                        window.location = "./Tao_CV.html"
+                    }
                 })
-               
+
             }
         })
     </script>
