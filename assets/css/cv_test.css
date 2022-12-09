@@ -117,10 +117,10 @@ h1,
 .chose-type-cv-2.type-active {
   border-bottom: 3px solid #2758dd;
 }
-#main-cv {
+#main-cv-1 {
   margin-bottom: 32px;
 }
-#main-cv .main-img {
+#main-cv-1 .main-img,#main-cv-2 .main-img  {
   min-height: 378px;
   max-height: 400px;
 }
@@ -211,7 +211,11 @@ h1,
 }
 .canhgiua {
   position: absolute;
-  left: 45%;
+  left: 37.5%;
   top: 50%;
   background: #2758dd;
+}
+
+main {
+  margin-bottom: 36px;
 }
