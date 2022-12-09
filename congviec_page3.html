@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cổng Thông Tin Việc Làm</title>
 
+    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/bootstrap-5.2.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/congviec.css">
     <link rel="stylesheet" href="./assets/css/reponsive_congviec.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
 </head>
 
 <body>
@@ -709,45 +709,8 @@
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
                 crossorigin="anonymous"></script>
             <script src="./assets/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
-            <script>
-                Validator({
-                    form: '#my-form-1',//todo Lấy ra id của form
-                    formGroupSelector: '.my-form-group',
-                    errorSelector: '.my-form-message',
-                    rules: [
-                        Validator.isRequired('#my-fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
-                        Validator.isRequired('#my-email', 'Không được bỏ trống Email'),
-                        Validator.isEmail('#my-email'),
-                        Validator.minLength('#my-password', 6),
-                        Validator.isRequired('#my-password_confirmation', 'Vui lòng nhập lại mật khẩu'),
-                        Validator.isConfirmed('#my-password_confirmation', () => {
-                            return document.querySelector('#my-form-1 #my-password').value
-                        }, 'Mật khẩu nhập lại không chính xác')
-
-                    ],
-                    onSubmit: function (data) {
-                        console.log(data);
-                    }
-
-                });
-                Validator({
-                    form: '#my-form-2',//todo Lấy ra id của form
-                    formGroupSelector: '.my-form-group',
-                    errorSelector: '.my-form-message',
-                    rules: [
-                        Validator.isRequired('#my-email-2', 'Không được bỏ trống Email'),
-                        Validator.isEmail('#my-email-2'),
-                        Validator.minLength('#my-password-2', 6),
-
-                    ],
-                    onSubmit: function (data) {
-                        console.log(data);
-                    }
-
-                });
 
 
-            </script>
 </body>
 
 </html>
