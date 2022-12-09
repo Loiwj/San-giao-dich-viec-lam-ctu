@@ -826,7 +826,6 @@
         document.addEventListener("click", function (e) {
             if (e.target.tagName.toLowerCase() === "button") {
                 var nopdon = document.querySelector(".taovc")
-                nopdon.addEventListener('click', function (e) {
                     if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
                         let dataToggle = document.createAttribute('data-toggle');
                         dataToggle.value = "modal"
@@ -841,10 +840,9 @@
                     else {
                         window.location = "./Tao_CV.html"
                     }
-                })
-
-            }
+                }
         })
+
     </script>
 
 </html>
