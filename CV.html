@@ -966,11 +966,14 @@
         crossorigin="anonymous"></script>
     <script src="./assets/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
     <script>
-        console.log(window.screen.width);
-        if(window.screen.width<976){
-            let show = document.querySelector('.show')
+        window.addEventListener('resize', function() {
+            if(window.screen.width<976){
+            let show = document.querySelector('.show') || null
+            if(show){
             show.classList.remove('show');
-        }
+                }
+            }
+        })
         document.addEventListener("click", function (e) {
             if (e.target.tagName.toLowerCase() === "button") {
                 var nopdon = document.querySelector(".taovc")
