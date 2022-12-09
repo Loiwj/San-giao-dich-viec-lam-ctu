@@ -41,6 +41,10 @@ li .mtb {
   transition: all 1s liner;
 }
 li .mtb:hover {
+  padding-left: 12px;
+    border-left: 4px solid #ffae28;
+    background: #cfdcff;
+    color: #2758dd;
   box-shadow: 0 0.5em 0.5em -0.4em #e5ff60;
   transform: translateY(-0.25em);
 }

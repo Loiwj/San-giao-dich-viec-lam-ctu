@@ -36,6 +36,9 @@
   }
 }
 /* start Css dùng chung */
+html{
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none !important;
   color: rgb(10, 92, 245);
