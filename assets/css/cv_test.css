@@ -14,7 +14,7 @@
     margin-left: 16px;
   }
   .canhgiua {
-    left: 40%;
+    left: 40%!important;
   }
 }
 @media (max-width: 720px){
@@ -211,7 +211,7 @@ h1,
 }
 .canhgiua {
   position: absolute;
-  left: 35%;
+  left: 45%;
   top: 50%;
   background: #2758dd;
 }
