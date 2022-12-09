@@ -55,7 +55,6 @@ function Validator(options) {
         return !errorMessage; //todo Ép kiểu sang bolen
     }
     var formElements = document.querySelector(options.form);
-    //todo 1
     if (formElements) {
         //todo Khi submit form
         formElements.onsubmit = function (e) {
