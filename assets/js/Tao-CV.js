@@ -1,9 +1,7 @@
 
 const btn = document.querySelector(".btn-submit");
 const btn_reLoad = document.querySelector(".btn-reload");
-setTimeout(function () {
-    alert("Bạn nên điền file ảnh vào trước, nếu không sẽ dễ lỗi lưu dữ liệu!!!");
-}, 0)
+
 
 imgInp.onchange = evt => {
     const [file] = imgInp.files
@@ -28,7 +26,7 @@ function render() {
             arrays.push(inputs[i].value);
         }
         else {
-            alert("Ô điền còn trống !!!, dữ liệu lưu có thể bị lỗi ")
+            alert("Ô điền còn trống !!!, dữ liệu lưu có thể bị lỗi, nên điền đầy đủ thông tin! ")
             break;
         }
     }
