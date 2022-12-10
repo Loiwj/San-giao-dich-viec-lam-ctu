@@ -21,7 +21,7 @@
     <div class="app">
         <header class="header wow">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-nav">
-               <a class="navbar-brand  logo-ctu " href="./index.html">
+                <a class="navbar-brand  logo-ctu " href="./index.html">
                     <img src="./assets/images/logo-ctu-svg.svg" alt="">
                 </a>
                 <div class="my-login-out">
@@ -198,7 +198,8 @@
                                             </li>
                                             <li>
                                                 <div class="mtb">
-                                                    <a href="./CV1.html" class="link-cv">Sinh viên mới ra trường - Chưa tốt
+                                                    <a href="./CV1.html" class="link-cv">Sinh viên mới ra trường - Chưa
+                                                        tốt
                                                         nghiệp</a>
                                                 </div>
                                             </li>
@@ -966,25 +967,25 @@
         crossorigin="anonymous"></script>
     <script src="./assets/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
     <script>
-    
+
         document.addEventListener("click", function (e) {
             if (e.target.tagName.toLowerCase() === "button") {
                 var nopdon = document.querySelector(".taovc")
-                    if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
-                        let dataToggle = document.createAttribute('data-toggle');
-                        dataToggle.value = "modal"
-                        let dataTarget = document.createAttribute("data-target")
-                        dataTarget.value = "#loginModal"
-                        let dataClass = document.createAttribute("class")
-                        dataClass.value = "btn canhgiua btn-outline-light me-2 taovc"
-                        this.setAttributeNode(dataToggle)
-                        this.setAttributeNode(dataTarget)
-                        this.setAttributeNode(dataClass)
-                    }
-                    else {
-                        window.location = "./Tao_CV.html"
-                    }
+                if (!JSON.parse(sessionStorage.getItem("isDisable"))) {
+                    let dataToggle = document.createAttribute('data-toggle');
+                    dataToggle.value = "modal"
+                    let dataTarget = document.createAttribute("data-target")
+                    dataTarget.value = "#loginModal"
+                    let dataClass = document.createAttribute("class")
+                    dataClass.value = "btn canhgiua btn-outline-light me-2 taovc"
+                    this.setAttributeNode(dataToggle)
+                    this.setAttributeNode(dataTarget)
+                    this.setAttributeNode(dataClass)
                 }
+                else {
+                    window.location = "./Tao_CV.html"
+                }
+            }
         })
 
     </script>
