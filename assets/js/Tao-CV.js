@@ -13,21 +13,26 @@ imgInp.onchange = evt => {
 btn.addEventListener("click", handleDetail);
 function handleDetail() {
     render();
-    alert("Dữ liệu đã được gửi! Bạn có thể xem ở phần Xem lại!")
 }
 
 function render() {
 
     let inputs = document.querySelectorAll(".input_handle");
     let arrays = [];
-
+    let emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+    // console.log(inputs);
+    console.log(typeof emailReg.test(inputs[6].value));
     for (let i = 0; i < inputs.length; ++i) {
-        if (inputs[i].value.length > 0) {
+        if ( emailReg.test(inputs[6].value) == false) {
+            alert('Eamil không đúng hoặc rỗng, vui lòng nhập lại!!');
+            return false;
+        }
+        else if (inputs[i].value.length > 0)  {
             arrays.push(inputs[i].value);
         }
         else {
             alert("Ô điền còn trống !!!, dữ liệu lưu có thể bị lỗi, nên điền đầy đủ thông tin! ")
-            break;
+            return false;
         }
     }
     
@@ -200,6 +205,7 @@ function render() {
     sessionStorage.setItem('data_arrays', arrays);
     sessionStorage.setItem('data', htmls);
     document.querySelector(".my-modal-body").innerHTML = sessionStorage.getItem('data');
+    alert("Dữ liệu đã được gửi! Bạn có thể xem ở phần Xem lại!");
 }
 
 document.querySelector(".my-modal-body").innerHTML = sessionStorage.getItem('data');
