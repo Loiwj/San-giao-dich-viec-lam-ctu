@@ -160,7 +160,7 @@ btn_unfilter_job.addEventListener("click", function () {
   if (inputChecked.length !== 0) {
     inputChecked[0].checked = false;
   }
-  window.location.reload();
+  window.location.href= "./congviec_page1.html";
 });
 // xử lí khi click vào select sort_day
 var sort_day = document.getElementById("sort_day");
